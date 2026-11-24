@@ -1,0 +1,1795 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>艾彩原创视频 - 官方品牌门户 | 高品质原创影像社区</title>
+<meta name="description" content="艾彩原创视频官方网站，专注原创影像内容生态，汇聚专业创作者与高清精品视频，用真实与匠心记录每一个值得被看见的故事。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Cpath d='M22 18l26 14-26 14z' fill='%23ff6b5e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --acv-ink:#1b2a4a;
+  --acv-ink-2:#2c3e63;
+  --acv-accent:#ff6b5e;
+  --acv-accent-soft:#ffe9e6;
+  --acv-blue:#3f6fd8;
+  --acv-blue-soft:#e8eefc;
+  --acv-paper:#f6f7fb;
+  --acv-card:#ffffff;
+  --acv-line:#dde3ef;
+  --acv-muted:#5f6b82;
+  --acv-radius:16px;
+  --acv-shadow:0 10px 30px rgba(27,42,74,.08);
+  --acv-head-h:112px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--acv-head-h)}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--acv-paper);
+  color:var(--acv-ink);
+  line-height:1.75;
+  font-size:16px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul,ol{list-style:none}
+.acv-wrap{width:min(1180px,92vw);margin:0 auto}
+.acv-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ============ 吸顶公告 + 页头 ============ */
+.acv-sticky-top{position:sticky;top:0;z-index:100}
+.acv-announce{
+  background:linear-gradient(90deg,#1b2a4a,#2c3e63 55%,#3f6fd8);
+  color:#e9eefb;font-size:13.5px;
+  display:flex;align-items:center;gap:14px;
+  padding:8px 0;
+}
+.acv-announce .acv-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.acv-announce-tag{
+  background:var(--acv-accent);color:#fff;font-size:11.5px;font-weight:700;
+  padding:1px 9px;border-radius:999px;letter-spacing:.06em;flex:none;
+}
+.acv-announce-list{display:flex;gap:22px;flex-wrap:wrap;overflow:hidden;flex:1;min-width:0}
+.acv-announce-list li{white-space:nowrap;opacity:.92}
+.acv-announce-list li b{color:#ffd9d4;font-weight:600}
+.acv-announce-time{font-size:12px;opacity:.65;flex:none}
+
+.acv-header{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--acv-line);
+}
+.acv-header .acv-wrap{display:flex;align-items:center;gap:22px;height:70px}
+.acv-brand{display:flex;align-items:center;gap:10px;flex:none}
+.acv-brand-mark{
+  width:38px;height:38px;border-radius:11px;flex:none;
+  background:linear-gradient(135deg,#1b2a4a,#3f6fd8);
+  display:grid;place-items:center;color:#fff;
+}
+.acv-brand-mark svg{width:18px;height:18px}
+.acv-brand-text{display:flex;flex-direction:column;line-height:1.25}
+.acv-brand-text strong{font-size:17px;letter-spacing:.02em}
+.acv-brand-text span{font-size:11px;color:var(--acv-muted);letter-spacing:.14em}
+.acv-nav{display:flex;gap:4px;align-items:center;margin-left:6px}
+.acv-nav a{
+  padding:6px 12px;border-radius:9px;font-size:14.5px;color:var(--acv-ink-2);
+  transition:background .2s,color .2s;white-space:nowrap;
+}
+.acv-nav a:hover,.acv-nav a:focus-visible{background:var(--acv-blue-soft);color:var(--acv-blue)}
+.acv-header-tools{display:flex;align-items:center;gap:10px;margin-left:auto}
+.acv-search{position:relative;display:flex;align-items:center}
+.acv-search input{
+  width:190px;border:1px solid var(--acv-line);border-radius:999px;
+  padding:8px 38px 8px 15px;font-size:13.5px;outline:none;background:var(--acv-paper);
+  transition:border .2s,width .25s,box-shadow .2s;
+}
+.acv-search input:focus{border-color:var(--acv-blue);width:230px;box-shadow:0 0 0 3px rgba(63,111,216,.12);background:#fff}
+.acv-search button{
+  position:absolute;right:4px;width:30px;height:30px;border-radius:50%;
+  display:grid;place-items:center;color:var(--acv-muted);
+}
+.acv-search button:hover{background:var(--acv-blue-soft);color:var(--acv-blue)}
+.acv-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  border-radius:999px;font-size:14px;font-weight:600;padding:9px 18px;
+  transition:transform .15s,box-shadow .2s,background .2s;white-space:nowrap;
+}
+.acv-btn:active{transform:translateY(1px)}
+.acv-btn-primary{background:var(--acv-accent);color:#fff;box-shadow:0 6px 16px rgba(255,107,94,.28)}
+.acv-btn-primary:hover{background:#f4594a}
+.acv-btn-ghost{background:var(--acv-paper);color:var(--acv-ink-2);border:1px solid var(--acv-line)}
+.acv-btn-ghost:hover{border-color:var(--acv-blue);color:var(--acv-blue)}
+.acv-btn-blue{background:var(--acv-blue);color:#fff}
+.acv-btn-blue:hover{background:#2f5cc0}
+.acv-nav-toggle{display:none;width:42px;height:42px;border-radius:11px;border:1px solid var(--acv-line);align-items:center;justify-content:center;background:#fff}
+.acv-nav-toggle span{display:block;width:18px;height:2px;background:var(--acv-ink);position:relative}
+.acv-nav-toggle span::before,.acv-nav-toggle span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--acv-ink);transition:transform .2s,top .2s}
+.acv-nav-toggle span::before{top:-6px}
+.acv-nav-toggle span::after{top:6px}
+.acv-nav-toggle[aria-expanded="true"] span{background:transparent}
+.acv-nav-toggle[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.acv-nav-toggle[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+
+.acv-search-feedback{
+  position:absolute;top:calc(100% + 8px);right:0;width:270px;background:#fff;
+  border:1px solid var(--acv-line);border-radius:12px;box-shadow:var(--acv-shadow);
+  padding:10px 12px;font-size:13px;color:var(--acv-muted);display:none;z-index:120;
+}
+.acv-search-feedback.is-open{display:block}
+.acv-search-feedback strong{color:var(--acv-ink)}
+.acv-search-feedback .acv-sf-hint{display:block;margin-top:4px;color:var(--acv-blue)}
+
+/* ============ 首屏 ============ */
+.acv-hero{padding:46px 0 34px;background:
+  radial-gradient(900px 380px at 85% -10%,#e8eefc 0%,rgba(232,238,252,0) 70%),
+  linear-gradient(180deg,#ffffff 0%,var(--acv-paper) 100%);
+  border-bottom:1px solid var(--acv-line);
+}
+.acv-hero-grid{display:grid;grid-template-columns:5fr 5fr;gap:44px;align-items:center;minmax:0}
+.acv-hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;
+  color:var(--acv-blue);background:var(--acv-blue-soft);padding:5px 13px;border-radius:999px;
+  letter-spacing:.06em;margin-bottom:18px;
+}
+.acv-hero-eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--acv-accent)}
+.acv-hero h1{
+  font-size:clamp(30px,4.2vw,50px);line-height:1.16;letter-spacing:-.01em;
+  font-weight:800;color:var(--acv-ink);margin-bottom:10px;
+}
+.acv-hero h1 em{font-style:normal;color:var(--acv-accent);position:relative}
+.acv-hero-sub{font-size:15.5px;color:var(--acv-muted);margin-bottom:16px;letter-spacing:.02em}
+.acv-hero-intro{font-size:15px;color:var(--acv-ink-2);line-height:1.85;margin-bottom:24px;max-width:52ch}
+.acv-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.acv-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:1px dashed var(--acv-line);padding-top:20px}
+.acv-stat b{display:block;font-size:24px;font-weight:800;color:var(--acv-ink);line-height:1.2}
+.acv-stat b i{font-style:normal;font-size:13px;color:var(--acv-muted);font-weight:500;margin-left:2px}
+.acv-stat span{font-size:12.5px;color:var(--acv-muted)}
+.acv-hero-visual{position:relative}
+.acv-hero-figure{
+  border-radius:22px;overflow:hidden;box-shadow:0 22px 50px rgba(27,42,74,.16);
+  border:1px solid #fff;background:#fff;
+}
+.acv-hero-figure svg{width:100%;height:auto;display:block}
+.acv-hero-badge{
+  position:absolute;left:-14px;bottom:22px;background:#fff;border-radius:14px;
+  padding:11px 16px;box-shadow:var(--acv-shadow);display:flex;align-items:center;gap:11px;
+  border:1px solid var(--acv-line);max-width:250px;
+}
+.acv-hero-badge-icon{width:36px;height:36px;border-radius:10px;background:var(--acv-accent-soft);display:grid;place-items:center;color:var(--acv-accent);flex:none}
+.acv-hero-badge b{display:block;font-size:13.5px;line-height:1.3}
+.acv-hero-badge span{font-size:11.5px;color:var(--acv-muted)}
+
+/* ============ 通用 section ============ */
+.acv-section{padding:52px 0}
+.acv-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:28px;flex-wrap:wrap}
+.acv-kicker{font-size:12.5px;font-weight:700;letter-spacing:.16em;color:var(--acv-accent);text-transform:uppercase;margin-bottom:6px}
+.acv-section-head h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;line-height:1.3}
+.acv-section-head p{font-size:14.5px;color:var(--acv-muted);max-width:56ch;margin-top:6px}
+.acv-tag{
+  display:inline-block;font-size:12px;padding:3px 10px;border-radius:999px;
+  background:var(--acv-blue-soft);color:var(--acv-blue);font-weight:600;line-height:1.6;
+}
+.acv-tag-hot{background:var(--acv-accent-soft);color:#e14b3d}
+.acv-tag-green{background:#e6f6ec;color:#1f8a4c}
+
+/* ============ 焦点内容 ============ */
+.acv-focus{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+.acv-focus-main{position:relative;border-radius:20px;overflow:hidden;background:#1b2a4a;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;box-shadow:var(--acv-shadow)}
+.acv-focus-main svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.acv-focus-overlay{position:relative;padding:26px;background:linear-gradient(180deg,rgba(15,25,45,0) 30%,rgba(15,25,45,.86) 100%)}
+.acv-focus-overlay h3{font-size:21px;line-height:1.4;margin:10px 0 8px}
+.acv-focus-overlay p{font-size:13.5px;color:#cfd8ea;line-height:1.7}
+.acv-focus-meta{display:flex;gap:14px;font-size:12.5px;color:#b9c4da;margin-top:12px;flex-wrap:wrap}
+.acv-focus-side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.acv-focus-item{
+  background:var(--acv-card);border:1px solid var(--acv-line);border-radius:var(--acv-radius);
+  padding:16px 18px;display:flex;gap:14px;align-items:flex-start;transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.acv-focus-item:hover{transform:translateY(-3px);box-shadow:var(--acv-shadow);border-color:#c8d5ef}
+.acv-focus-num{font-size:20px;font-weight:800;color:#c9d4ea;line-height:1.2;flex:none;font-family:Georgia,serif}
+.acv-focus-item h3{font-size:15.5px;line-height:1.5;margin-bottom:4px}
+.acv-focus-item p{font-size:13px;color:var(--acv-muted);line-height:1.65}
+.acv-focus-item .acv-focus-meta{margin-top:8px;color:var(--acv-muted)}
+
+/* ============ 视频列表 ============ */
+.acv-video-list{border:1px solid var(--acv-line);border-radius:20px;background:#fff;overflow:hidden;box-shadow:var(--acv-shadow)}
+.acv-video-row{
+  display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:18px;align-items:center;
+  padding:18px 22px;border-bottom:1px solid var(--acv-line);min-width:0;
+  transition:background .2s;
+}
+.acv-video-row:last-child{border-bottom:none}
+.acv-video-row:hover{background:#fafbff}
+.acv-video-thumb{border-radius:11px;overflow:hidden;background:#eef2fb;aspect-ratio:16/9}
+.acv-video-thumb svg{width:100%;height:100%;display:block}
+.acv-video-thumb-ph{display:grid;place-items:center;height:100%;color:var(--acv-blue);background:linear-gradient(135deg,#e8eefc,#f6f7fb)}
+.acv-video-thumb-ph svg{width:26px;height:26px}
+.acv-video-body{min-width:0}
+.acv-video-body h3{font-size:16px;line-height:1.5;margin-bottom:5px}
+.acv-video-body h3 a:hover{color:var(--acv-blue)}
+.acv-video-body p{font-size:13px;color:var(--acv-muted);line-height:1.65;margin-bottom:8px}
+.acv-video-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:6px}
+.acv-video-meta{display:flex;gap:14px;font-size:12px;color:#8b96ac;flex-wrap:wrap}
+.acv-video-meta b{color:var(--acv-ink-2);font-weight:600}
+.acv-video-actions{display:flex;flex-direction:column;gap:8px;align-items:flex-end;flex:none}
+.acv-icon-btn{
+  display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:var(--acv-muted);
+  border:1px solid var(--acv-line);border-radius:999px;padding:5px 11px;background:#fff;
+  transition:color .2s,border-color .2s,background .2s;
+}
+.acv-icon-btn svg{width:14px;height:14px}
+.acv-icon-btn:hover{border-color:var(--acv-blue);color:var(--acv-blue);background:var(--acv-blue-soft)}
+.acv-icon-btn.is-liked{color:#e14b3d;border-color:#f6c9c4;background:#fff3f1}
+.acv-icon-btn.is-saved{color:#e14b3d;border-color:#f6c9c4;background:#fff3f1}
+.acv-icon-btn.is-saved svg{fill:#e14b3d}
+
+/* ============ 专题 ============ */
+.acv-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.acv-topic{
+  background:#fff;border:1px solid var(--acv-line);border-radius:20px;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;
+}
+.acv-topic:hover{transform:translateY(-4px);box-shadow:var(--acv-shadow)}
+.acv-topic-cover{aspect-ratio:16/9;overflow:hidden;background:#eef2fb}
+.acv-topic-cover svg{width:100%;height:100%;display:block}
+.acv-topic-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.acv-topic-body h3{font-size:17px;line-height:1.45}
+.acv-topic-body>p{font-size:13px;color:var(--acv-muted);line-height:1.7}
+.acv-topic-state{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--acv-muted)}
+.acv-topic-state .acv-dot{width:7px;height:7px;border-radius:50%;background:#28b46a}
+.acv-topic-items{border-top:1px dashed var(--acv-line);padding-top:10px;display:flex;flex-direction:column;gap:7px;margin-top:auto}
+.acv-topic-items li{font-size:13px;color:var(--acv-ink-2);display:flex;gap:8px;line-height:1.6}
+.acv-topic-items li::before{content:"›";color:var(--acv-accent);font-weight:700}
+.acv-topic-items li:hover{color:var(--acv-blue)}
+
+/* ============ 关键词解析 ============ */
+.acv-about{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:start}
+.acv-about-copy h2{margin-bottom:14px}
+.acv-about-copy h3{font-size:17px;margin:22px 0 8px;color:var(--acv-ink);display:flex;align-items:center;gap:9px}
+.acv-about-copy h3::before{content:"";width:5px;height:18px;border-radius:3px;background:linear-gradient(180deg,var(--acv-accent),#ff9d86)}
+.acv-about-copy p{font-size:14.5px;color:#3c4a66;line-height:1.95;margin-bottom:10px}
+.acv-about-aside{display:flex;flex-direction:column;gap:16px;position:sticky;top:calc(var(--acv-head-h) + 16px)}
+.acv-aside-card{background:#fff;border:1px solid var(--acv-line);border-radius:16px;padding:20px;box-shadow:var(--acv-shadow)}
+.acv-aside-card h3{font-size:15px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.acv-aside-card h3 svg{width:16px;height:16px;color:var(--acv-accent)}
+.acv-fact-list{display:flex;flex-direction:column;gap:11px}
+.acv-fact-list li{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;color:var(--acv-muted);border-bottom:1px dashed var(--acv-line);padding-bottom:9px}
+.acv-fact-list li:last-child{border-bottom:none;padding-bottom:0}
+.acv-fact-list b{color:var(--acv-ink);font-weight:700;text-align:right}
+.acv-aside-mini{aspect-ratio:16/10;border-radius:12px;overflow:hidden;margin-bottom:12px;background:#eef2fb}
+.acv-aside-mini svg{width:100%;height:100%;display:block}
+
+/* ============ 作者 ============ */
+.acv-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.acv-author{
+  background:#fff;border:1px solid var(--acv-line);border-radius:18px;padding:20px;
+  display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;transition:transform .2s,box-shadow .2s;
+}
+.acv-author:hover{transform:translateY(-3px);box-shadow:var(--acv-shadow)}
+.acv-avatar{
+  width:56px;height:56px;border-radius:50%;display:grid;place-items:center;
+  font-weight:800;font-size:19px;color:#fff;flex:none;overflow:hidden;
+}
+.acv-avatar svg{width:100%;height:100%;display:block}
+.acv-author-body{min-width:0}
+.acv-author-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:2px}
+.acv-author-top h3{font-size:16px}
+.acv-author-field{font-size:12.5px;color:var(--acv-blue);font-weight:600}
+.acv-author-nums{display:flex;gap:14px;font-size:12px;color:var(--acv-muted);margin:5px 0 7px;flex-wrap:wrap}
+.acv-author-nums b{color:var(--acv-ink-2)}
+.acv-author-desc{font-size:13px;color:var(--acv-muted);line-height:1.75}
+.acv-author-more{margin-top:9px;font-size:12.5px;color:var(--acv-blue);font-weight:600;display:inline-flex;align-items:center;gap:4px}
+.acv-author-more:hover{text-decoration:underline}
+.acv-author-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;grid-column:1/-1}
+
+/* ============ 评价 ============ */
+.acv-reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.acv-review{
+  background:#fff;border:1px solid var(--acv-line);border-radius:16px;padding:18px 20px;
+  display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s;
+}
+.acv-review:hover{border-color:#c8d5ef;box-shadow:var(--acv-shadow)}
+.acv-review-top{display:flex;align-items:center;gap:10px}
+.acv-review-ava{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:700;flex:none}
+.acv-review-name{font-size:14px;font-weight:600}
+.acv-review-date{font-size:11.5px;color:#98a3b8}
+.acv-stars{color:#f5a623;font-size:12.5px;letter-spacing:1px;margin-left:auto}
+.acv-review p{font-size:13.5px;color:#3c4a66;line-height:1.8}
+.acv-review .acv-tag{align-self:flex-start}
+
+/* ============ 企业动态 + 合作 ============ */
+.acv-two-col{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:26px;align-items:start}
+.acv-timeline{background:#fff;border:1px solid var(--acv-line);border-radius:18px;padding:8px 24px 12px}
+.acv-timeline li{position:relative;padding:16px 0 16px 26px;border-left:2px solid #e6ecf8}
+.acv-timeline li::before{
+  content:"";position:absolute;left:-7px;top:22px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:2.5px solid var(--acv-accent);
+}
+.acv-timeline li:last-child{border-left-color:transparent}
+.acv-timeline time{font-size:12px;color:var(--acv-accent);font-weight:700;letter-spacing:.04em}
+.acv-timeline h3{font-size:15px;margin:3px 0 4px}
+.acv-timeline p{font-size:13px;color:var(--acv-muted);line-height:1.7}
+.acv-partners{background:#fff;border:1px solid var(--acv-line);border-radius:18px;padding:22px}
+.acv-partners h3{font-size:15px;margin-bottom:14px}
+.acv-partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.acv-partner{
+  border:1px solid var(--acv-line);border-radius:11px;padding:11px 9px;text-align:center;
+  font-size:12.5px;color:var(--acv-ink-2);font-weight:600;background:var(--acv-paper);
+  transition:border-color .2s,color .2s,background .2s;
+}
+.acv-partner:hover{border-color:var(--acv-blue);color:var(--acv-blue);background:var(--acv-blue-soft)}
+.acv-partners .acv-note{font-size:12px;color:#98a3b8;margin-top:12px;line-height:1.7}
+
+/* ============ FAQ ============ */
+.acv-faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.acv-faq details{
+  background:#fff;border:1px solid var(--acv-line);border-radius:14px;padding:0 18px;
+  transition:border-color .2s,box-shadow .2s;height:fit-content;
+}
+.acv-faq details[open]{border-color:#c8d5ef;box-shadow:var(--acv-shadow)}
+.acv-faq summary{
+  list-style:none;cursor:pointer;padding:15px 0;font-size:14.5px;font-weight:600;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.acv-faq summary::-webkit-details-marker{display:none}
+.acv-faq summary::after{content:"+";font-size:20px;color:var(--acv-accent);font-weight:400;transition:transform .2s;line-height:1}
+.acv-faq details[open] summary::after{transform:rotate(45deg)}
+.acv-faq details p{font-size:13.5px;color:var(--acv-muted);line-height:1.8;padding-bottom:16px}
+
+/* ============ CTA 投稿 ============ */
+.acv-cta{
+  background:linear-gradient(120deg,#1b2a4a,#2c3e63 60%,#3f6fd8);
+  border-radius:24px;padding:40px 42px;color:#fff;display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center;
+  box-shadow:0 24px 50px rgba(27,42,74,.22);position:relative;overflow:hidden;
+}
+.acv-cta::after{
+  content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,107,94,.35),rgba(255,107,94,0) 70%);
+}
+.acv-cta h2{font-size:clamp(20px,2.4vw,27px);margin-bottom:8px}
+.acv-cta p{font-size:14px;color:#cfd8ea;max-width:56ch;line-height:1.8}
+.acv-cta-actions{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.acv-cta .acv-btn-ghost{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);color:#fff}
+.acv-cta .acv-btn-ghost:hover{background:rgba(255,255,255,.2);border-color:#fff}
+
+/* ============ 页脚 ============ */
+.acv-footer{background:#141f36;color:#aab6cd;padding:46px 0 0;margin-top:52px}
+.acv-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding-bottom:34px}
+.acv-footer h4{color:#fff;font-size:14.5px;margin-bottom:13px}
+.acv-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:#fff}
+.acv-footer-brand .acv-brand-mark{background:linear-gradient(135deg,#ff6b5e,#ff9d86)}
+.acv-footer p{font-size:13px;line-height:1.85;color:#8e9cb6}
+.acv-footer ul{display:flex;flex-direction:column;gap:9px}
+.acv-footer ul a{font-size:13px;color:#aab6cd;transition:color .2s}
+.acv-footer ul a:hover{color:#fff}
+.acv-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.09);padding:18px 0;display:flex;
+  justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#7c8aa5;
+}
+.acv-footer-bottom a{color:#aab6cd}
+.acv-footer-bottom a:hover{color:#fff}
+
+/* ============ 回到顶部 & Toast & 弹窗 ============ */
+.acv-to-top{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--acv-ink);color:#fff;display:grid;place-items:center;
+  box-shadow:0 10px 24px rgba(27,42,74,.3);opacity:0;visibility:hidden;
+  transform:translateY(10px);transition:opacity .25s,transform .25s,visibility .25s;z-index:90;
+}
+.acv-to-top.is-show{opacity:1;visibility:visible;transform:translateY(0)}
+.acv-to-top:hover{background:var(--acv-blue)}
+
+.acv-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:rgba(20,31,54,.95);color:#fff;font-size:13.5px;padding:10px 20px;border-radius:999px;
+  opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s;z-index:200;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);max-width:86vw;text-align:center;
+}
+.acv-toast.is-show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+.acv-modal{
+  position:fixed;inset:0;background:rgba(15,25,45,.55);backdrop-filter:blur(3px);
+  display:grid;place-items:center;padding:20px;z-index:300;
+  opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s;
+}
+.acv-modal.is-open{opacity:1;visibility:visible}
+.acv-modal-box{
+  background:#fff;border-radius:20px;width:min(520px,100%);padding:26px 26px 24px;
+  box-shadow:0 30px 70px rgba(0,0,0,.3);transform:translateY(14px);transition:transform .22s;
+  max-height:86vh;overflow:auto;
+}
+.acv-modal.is-open .acv-modal-box{transform:translateY(0)}
+.acv-modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
+.acv-modal-head h3{font-size:19px}
+.acv-modal-head p{font-size:12.5px;color:var(--acv-muted);margin-top:2px}
+.acv-modal-close{width:32px;height:32px;border-radius:50%;background:var(--acv-paper);display:grid;place-items:center;color:var(--acv-muted);flex:none}
+.acv-modal-close:hover{background:var(--acv-accent-soft);color:var(--acv-accent)}
+.acv-field{margin-bottom:14px}
+.acv-field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.acv-field input,.acv-field textarea,.acv-field select{
+  width:100%;border:1px solid var(--acv-line);border-radius:10px;padding:10px 13px;
+  font-size:14px;font-family:inherit;background:var(--acv-paper);outline:none;transition:border .2s,background .2s;color:var(--acv-ink);
+}
+.acv-field input:focus,.acv-field textarea:focus,.acv-field select:focus{border-color:var(--acv-blue);background:#fff;box-shadow:0 0 0 3px rgba(63,111,216,.12)}
+.acv-field textarea{resize:vertical;min-height:92px}
+.acv-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:6px;flex-wrap:wrap}
+.acv-share-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:6px 0 4px}
+.acv-share-item{
+  border:1px solid var(--acv-line);border-radius:12px;padding:14px 8px;text-align:center;
+  font-size:13px;font-weight:600;background:var(--acv-paper);transition:border-color .2s,color .2s,background .2s;
+}
+.acv-share-item:hover{border-color:var(--acv-blue);color:var(--acv-blue);background:var(--acv-blue-soft)}
+.acv-share-item span{display:block;font-size:20px;margin-bottom:4px}
+.acv-author-modal-top{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+.acv-author-modal-top .acv-avatar{width:64px;height:64px;font-size:22px}
+.acv-author-modal-top h4{font-size:17px}
+.acv-author-modal-top span{font-size:12.5px;color:var(--acv-blue);font-weight:600}
+.acv-author-modal-body p{font-size:13.5px;color:var(--acv-muted);line-height:1.85;margin-bottom:10px}
+.acv-author-modal-stats{display:flex;gap:18px;font-size:13px;color:var(--acv-muted);border-top:1px dashed var(--acv-line);padding-top:12px;margin-top:6px}
+.acv-author-modal-stats b{display:block;color:var(--acv-ink);font-size:16px}
+
+/* ============ 响应式 ============ */
+@media (max-width:1024px){
+  :root{--acv-head-h:104px}
+  .acv-hero-grid{grid-template-columns:1fr;gap:30px}
+  .acv-hero-intro{max-width:none}
+  .acv-focus{grid-template-columns:1fr}
+  .acv-topics{grid-template-columns:1fr 1fr}
+  .acv-about{grid-template-columns:1fr}
+  .acv-about-aside{position:static;flex-direction:row;flex-wrap:wrap}
+  .acv-about-aside>*{flex:1 1 260px}
+  .acv-two-col{grid-template-columns:1fr}
+  .acv-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .acv-nav{
+    position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;
+    align-items:stretch;padding:10px 4vw 16px;gap:2px;border-bottom:1px solid var(--acv-line);
+    box-shadow:0 18px 30px rgba(27,42,74,.1);display:none;
+  }
+  .acv-nav.is-open{display:flex}
+  .acv-nav a{padding:11px 14px;border-radius:10px;font-size:15px}
+  .acv-header .acv-wrap{position:relative}
+  .acv-nav-toggle{display:flex}
+  .acv-search input{width:130px}
+  .acv-search input:focus{width:170px}
+  .acv-search-feedback{width:230px}
+  .acv-header-tools .acv-btn{padding:8px 13px;font-size:13px}
+  .acv-video-row{grid-template-columns:80px minmax(0,1fr);gap:14px;padding:16px}
+  .acv-video-actions{grid-column:1/-1;flex-direction:row;justify-content:flex-end;flex-wrap:wrap}
+  .acv-authors,.acv-reviews,.acv-faq{grid-template-columns:1fr}
+  .acv-cta{grid-template-columns:1fr;padding:30px 24px}
+  .acv-footer-grid{gap:24px}
+}
+@media (max-width:560px){
+  :root{--acv-head-h:98px}
+  .acv-announce-list{gap:16px}
+  .acv-announce-time{display:none}
+  .acv-search{display:none}
+  .acv-hero{padding:32px 0 26px}
+  .acv-hero-stats{gap:10px}
+  .acv-stat b{font-size:20px}
+  .acv-topics{grid-template-columns:1fr}
+  .acv-hero-badge{left:0;bottom:12px;padding:9px 12px}
+  .acv-footer-grid{grid-template-columns:1fr}
+  .acv-section{padding:40px 0}
+  .acv-author{grid-template-columns:48px minmax(0,1fr);padding:16px}
+  .acv-avatar{width:48px;height:48px;font-size:16px}
+  .acv-to-top{right:14px;bottom:16px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ================= S1 公告条 + 页头（吸顶） ================= -->
+<div class="acv-sticky-top">
+  <div class="acv-announce" role="region" aria-label="官方公告">
+    <div class="acv-wrap">
+      <span class="acv-announce-tag">官方发布</span>
+      <ul class="acv-announce-list">
+        <li><b>新增</b>《城市夜行手记》第 4 集上线，4K 高清正版首发</li>
+        <li><b>报名</b>“冬日影像挑战”开放投稿，12 月 8 日截止</li>
+        <li><b>更新</b>创作者分成计划 2.0 规则说明已发布</li>
+      </ul>
+      <span class="acv-announce-time">2026-11-22 更新</span>
+    </div>
+  </div>
+
+  <header class="acv-header">
+    <div class="acv-wrap">
+      <a class="acv-brand" href="#acv-top" aria-label="艾彩原创视频首页">
+        <span class="acv-brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l12 7-12 7z"/></svg>
+        </span>
+        <span class="acv-brand-text">
+          <strong>艾彩原创视频</strong>
+          <span>AICAI ORIGINAL</span>
+        </span>
+      </a>
+
+      <nav class="acv-nav" id="acvNav" aria-label="主导航">
+        <a href="#acv-focus">焦点内容</a>
+        <a href="#acv-videos">热门视频</a>
+        <a href="#acv-topics">专题企划</a>
+        <a href="#acv-brand">品牌解析</a>
+        <a href="#acv-authors">创作者</a>
+        <a href="#acv-reviews">口碑</a>
+        <a href="#acv-faq">帮助</a>
+      </nav>
+
+      <div class="acv-header-tools">
+        <div class="acv-search">
+          <label class="acv-sr" for="acvSearchInput">搜索站内内容</label>
+          <input id="acvSearchInput" type="search" placeholder="搜索视频、专题、创作者" autocomplete="off">
+          <button type="button" id="acvSearchBtn" aria-label="搜索">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+          <div class="acv-search-feedback" id="acvSearchFeedback" role="status" aria-live="polite"></div>
+        </div>
+        <button class="acv-btn acv-btn-primary" type="button" data-acv-open="submit">投稿</button>
+        <button class="acv-nav-toggle" type="button" id="acvNavToggle" aria-expanded="false" aria-controls="acvNav" aria-label="展开导航">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="acv-top">
+
+  <!-- ================= S2 品牌首屏 ================= -->
+  <section class="acv-hero" aria-labelledby="acvHeroTitle">
+    <div class="acv-wrap acv-hero-grid">
+      <div class="acv-hero-copy">
+        <span class="acv-hero-eyebrow">官方网站 · 企业级原创影像品牌</span>
+        <h1 id="acvHeroTitle">艾彩原创视频</h1>
+        <p class="acv-hero-sub">一座为原创影像而生的高清内容社区</p>
+        <p class="acv-hero-intro">
+          艾彩原创视频是深耕原创影像垂直领域的品牌官网与内容平台。我们以企业级制作标准与开放的内容生态，
+          为创作者提供稳定的上传、分成与成长支持，为观众交付值得信赖的精品内容。这里既有专业团队的深度企划，
+          也有普通人的真实记录，每一帧都坚持正版、高清与匠心。
+        </p>
+        <div class="acv-hero-actions">
+          <a class="acv-btn acv-btn-primary" href="#acv-videos">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l12 7-12 7z"/></svg>
+            观看热门视频
+          </a>
+          <a class="acv-btn acv-btn-ghost" href="#acv-topics">浏览专题企划</a>
+          <a class="acv-btn acv-btn-ghost" href="#acv-authors">认识创作者</a>
+        </div>
+        <div class="acv-hero-stats" aria-label="平台核心数据">
+          <div class="acv-stat"><b>42.8<i>万</i></b><span>累计原创作品</span></div>
+          <div class="acv-stat"><b>3600<i>+</i></b><span>签约创作者</span></div>
+          <div class="acv-stat"><b>98.2<i>%</i></b><span>用户口碑好评率</span></div>
+        </div>
+      </div>
+
+      <div class="acv-hero-visual">
+        <figure class="acv-hero-figure">
+          <svg viewBox="0 0 720 520" role="img" aria-label="艾彩原创视频主视觉：夜色中的创作工作室与影像光束">
+            <defs>
+              <linearGradient id="acvSky" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#16233d"/><stop offset=".55" stop-color="#243a63"/><stop offset="1" stop-color="#3f6fd8"/>
+              </linearGradient>
+              <linearGradient id="acvBeam" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ff6b5e" stop-opacity=".95"/><stop offset="1" stop-color="#ffb36b" stop-opacity=".1"/>
+              </linearGradient>
+              <linearGradient id="acvFloor" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#0f1a2e" stop-opacity=".15"/><stop offset="1" stop-color="#0f1a2e" stop-opacity=".85"/>
+              </linearGradient>
+            </defs>
+            <rect width="720" height="520" fill="url(#acvSky)"/>
+            <circle cx="584" cy="112" r="58" fill="#ffd9c9" opacity=".22"/>
+            <circle cx="584" cy="112" r="30" fill="#ffe9e6" opacity=".85"/>
+            <g opacity=".5" fill="#9fb6e6">
+              <circle cx="90" cy="70" r="2.6"/><circle cx="168" cy="42" r="2"/><circle cx="280" cy="88" r="2.2"/>
+              <circle cx="360" cy="46" r="1.8"/><circle cx="452" cy="82" r="2.4"/><circle cx="664" cy="196" r="2"/>
+              <circle cx="632" cy="60" r="2.2"/><circle cx="200" cy="150" r="1.6"/>
+            </g>
+            <path d="M0 348h720v172H0z" fill="#122038"/>
+            <path d="M0 348h720v54H0z" fill="#1b2d4d"/>
+            <g>
+              <rect x="70" y="196" width="150" height="152" rx="10" fill="#1e3152"/>
+              <rect x="88" y="218" width="114" height="66" rx="5" fill="#2f4a78"/>
+              <rect x="96" y="228" width="42" height="8" rx="4" fill="#6f8fc9"/>
+              <rect x="96" y="244" width="72" height="6" rx="3" fill="#4e6b9e"/>
+              <rect x="96" y="258" width="56" height="6" rx="3" fill="#4e6b9e"/>
+              <rect x="88" y="300" width="114" height="10" rx="4" fill="#2f4a78"/>
+              <rect x="88" y="318" width="82" height="8" rx="4" fill="#26395c"/>
+            </g>
+            <g>
+              <rect x="506" y="180" width="142" height="168" rx="10" fill="#1a2b48"/>
+              <rect x="524" y="202" width="106" height="70" rx="5" fill="#2a426c"/>
+              <circle cx="577" cy="237" r="17" fill="#ff6b5e" opacity=".85"/>
+              <path d="M572 230l12 7-12 7z" fill="#fff"/>
+              <rect x="524" y="288" width="106" height="9" rx="4" fill="#2a426c"/>
+              <rect x="524" y="306" width="72" height="7" rx="3" fill="#22385c"/>
+            </g>
+            <path d="M300 130l120 240H180z" fill="url(#acvBeam)" opacity=".38"/>
+            <g>
+              <rect x="288" y="250" width="148" height="98" rx="8" fill="#0e1a30"/>
+              <rect x="302" y="264" width="120" height="56" rx="4" fill="#3f6fd8" opacity=".55"/>
+              <path d="M348 282l24 12-24 12z" fill="#fff" opacity=".95"/>
+              <rect x="302" y="330" width="86" height="7" rx="3" fill="#2a426c"/>
+            </g>
+            <g stroke="#ffb36b" stroke-width="2" opacity=".55" fill="none">
+              <path d="M236 250L288 296"/><path d="M486 250L438 296"/>
+            </g>
+            <g fill="#ff6b5e" opacity=".9">
+              <circle cx="236" cy="250" r="5"/><circle cx="486" cy="250" r="5"/>
+            </g>
+            <rect x="0" y="348" width="720" height="172" fill="url(#acvFloor)"/>
+            <path d="M150 520l90-172h240l90 172z" fill="#ff6b5e" opacity=".08"/>
+          </svg>
+        </figure>
+        <div class="acv-hero-badge">
+          <span class="acv-hero-badge-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.9-4.8 4.6 1.2 6.6L12 17.1 6.1 20.3l1.2-6.6L2.5 9.1l6.6-.9z"/></svg>
+          </span>
+          <span>
+            <b>本周精品推荐</b>
+            <span>共 26 部高清原创作品</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S3 焦点内容 ================= -->
+  <section class="acv-section" id="acv-focus" aria-labelledby="acvFocusTitle">
+    <div class="acv-wrap">
+      <div class="acv-section-head">
+        <div>
+          <div class="acv-kicker">Focus · 编辑部焦点</div>
+          <h2 id="acvFocusTitle">本周焦点：艾彩原创视频精选企划</h2>
+          <p>由艾彩原创视频编辑部与签约创作者共同完成的四组重点内容，涵盖城市纪录、手作幕后、深度访谈与实用教程。</p>
+        </div>
+        <a class="acv-btn acv-btn-ghost" href="#acv-videos">查看全部内容</a>
+      </div>
+
+      <div class="acv-focus">
+        <article class="acv-focus-main">
+          <svg viewBox="0 0 640 480" role="img" aria-label="焦点主视觉：雨夜街头摄影者与霓虹倒影">
+            <defs>
+              <linearGradient id="acvRain" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#101c33"/><stop offset="1" stop-color="#26406b"/>
+              </linearGradient>
+              <linearGradient id="acvNeon" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#ff6b5e"/><stop offset="1" stop-color="#ffb36b"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="480" fill="url(#acvRain)"/>
+            <g opacity=".45" fill="#41608f">
+              <rect x="40" y="70" width="120" height="210" rx="6"/>
+              <rect x="180" y="120" width="90" height="160" rx="6"/>
+              <rect x="470" y="60" width="130" height="220" rx="6"/>
+              <rect x="360" y="108" width="80" height="172" rx="6"/>
+            </g>
+            <g fill="#ffd9c9" opacity=".75">
+              <rect x="58" y="90" width="22" height="26" rx="3"/><rect x="98" y="90" width="22" height="26" rx="3"/>
+              <rect x="58" y="140" width="22" height="26" rx="3"/><rect x="98" y="140" width="22" height="26" rx="3"/>
+              <rect x="488" y="84" width="24" height="28" rx="3"/><rect x="532" y="84" width="24" height="28" rx="3"/>
+              <rect x="488" y="140" width="24" height="28" rx="3"/><rect x="532" y="140" width="24" height="28" rx="3"/>
+            </g>
+            <rect x="0" y="292" width="640" height="188" fill="#0c1526"/>
+            <ellipse cx="330" cy="360" rx="210" ry="60" fill="#3f6fd8" opacity=".18"/>
+            <g stroke="url(#acvNeon)" stroke-width="3" opacity=".8" fill="none">
+              <path d="M110 300v96"/><path d="M520 300v96"/>
+            </g>
+            <g fill="#0a1220">
+              <circle cx="316" cy="286" r="17"/>
+              <path d="M298 308h36l9 76h-54z"/>
+              <path d="M303 384l-9 42h14l7-38z"/><path d="M329 384l9 42h-14l-7-38z"/>
+            </g>
+            <rect x="336" y="292" width="52" height="34" rx="6" fill="#1b2a4a" stroke="#5f7fb8"/>
+            <circle cx="362" cy="309" r="10" fill="#3f6fd8"/>
+            <g stroke="#8fb0ea" stroke-width="1.8" opacity=".6">
+              <path d="M80 60l-14 34"/><path d="M200 40l-14 34"/><path d="M420 52l-14 34"/>
+              <path d="M560 40l-14 34"/><path d="M300 30l-14 34"/><path d="M480 120l-14 34"/>
+            </g>
+            <ellipse cx="330" cy="432" rx="150" ry="14" fill="#ff6b5e" opacity=".2"/>
+          </svg>
+          <div class="acv-focus-overlay">
+            <span class="acv-tag acv-tag-hot">本期主推</span>
+            <h3>《雨夜取景器》：四位摄影师镜头里的同一条街</h3>
+            <p>艾彩原创视频年度城市纪录企划，以一夜降雨为线索，跟随四位风格迥异的创作者完成同一街区的独立拍摄，呈现多元视角下的在地文化。</p>
+            <div class="acv-focus-meta">
+              <span>时长 24:18</span><span>播放 96.4 万</span><span>收藏 3.2 万</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="acv-focus-side">
+          <article class="acv-focus-item">
+            <span class="acv-focus-num">01</span>
+            <div>
+              <h3>木作台前的第 400 天：手作人的日常记录</h3>
+              <p>从一块原木到一件餐具的完整流程，附带工时与成本表，适合想入门手作 DIY 的观众。</p>
+              <div class="acv-focus-meta"><span class="acv-tag">手作</span><span>播放 42.1 万</span></div>
+            </div>
+          </article>
+          <article class="acv-focus-item">
+            <span class="acv-focus-num">02</span>
+            <div>
+              <h3>对话周澍：一个剪辑师的十年与被删掉的镜头</h3>
+              <p>深度访谈，聊创作取舍、行业观察与团队协作，附完整时间轴与访谈摘录。</p>
+              <div class="acv-focus-meta"><span class="acv-tag">人物访谈</span><span>播放 28.7 万</span></div>
+            </div>
+          </article>
+          <article class="acv-focus-item">
+            <span class="acv-focus-num">03</span>
+            <div>
+              <h3>手机也能拍出电影感：三个光位实战教程</h3>
+              <p>实用技巧向内容，现场演示三种自然光位，附参数截图与拍摄清单。</p>
+              <div class="acv-focus-meta"><span class="acv-tag">教程干货</span><span>播放 65.8 万</span></div>
+            </div>
+          </article>
+          <article class="acv-focus-item">
+            <span class="acv-focus-num">04</span>
+            <div>
+              <h3>老城区一天：早餐摊、修表铺与理发椅</h3>
+              <p>在地文化纪录短片，用三组人物串起街区的时间感，评论互动热度持续走高。</p>
+              <div class="acv-focus-meta"><span class="acv-tag">城市探索</span><span>播放 37.6 万</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S3 视频流 ================= -->
+  <section class="acv-section" id="acv-videos" aria-labelledby="acvVideoTitle">
+    <div class="acv-wrap">
+      <div class="acv-section-head">
+        <div>
+          <div class="acv-kicker">Trending · 热门视频</div>
+          <h2 id="acvVideoTitle">艾彩原创视频热门榜单</h2>
+          <p>根据近 7 天播放、收藏与完播率综合排序，重点条目提供高清封面预览，其余以文字条目呈现完整信息。</p>
+        </div>
+        <span class="acv-tag acv-tag-green">数据更新于 2026-11-22</span>
+      </div>
+
+      <div class="acv-video-list">
+        <article class="acv-video-row">
+          <a class="acv-video-thumb" href="#acv-videos" aria-label="播放《雨夜取景器》">
+            <svg viewBox="0 0 160 90" role="img" aria-label="雨夜取景器视频封面：霓虹街道与撑伞行人">
+              <rect width="160" height="90" fill="#16233d"/>
+              <rect x="12" y="14" width="34" height="46" rx="3" fill="#2a426c"/>
+              <rect x="112" y="10" width="38" height="50" rx="3" fill="#2a426c"/>
+              <g fill="#ffd9c9" opacity=".8"><rect x="18" y="20" width="8" height="8" rx="1"/><rect x="32" y="20" width="8" height="8" rx="1"/><rect x="120" y="18" width="9" height="9" rx="1"/><rect x="136" y="18" width="9" height="9" rx="1"/></g>
+              <rect y="60" width="160" height="30" fill="#0c1526"/>
+              <circle cx="72" cy="52" r="6" fill="#0a1220"/>
+              <path d="M66 58h12l4 32H62z" fill="#0a1220"/>
+              <path d="M54 44a18 18 0 0136 0z" fill="#ff6b5e" opacity=".8"/>
+              <g stroke="#8fb0ea" stroke-width="1" opacity=".5"><path d="M40 6l-6 16"/><path d="M100 4l-6 16"/><path d="M140 66l-6 16"/></g>
+            </svg>
+          </a>
+          <div class="acv-video-body">
+            <h3><a href="#acv-videos">《雨夜取景器》全片：四位摄影师镜头里的同一条街</a></h3>
+            <p>艾彩原创视频年度城市纪录企划正片，4K 高清正版首发，含导演手记与拍摄地图。</p>
+            <div class="acv-video-tags"><span class="acv-tag acv-tag-hot">城市探索</span><span class="acv-tag">纪录片</span><span class="acv-tag">在地文化</span></div>
+            <div class="acv-video-meta"><span>创作者 <b>林岸纪实</b></span><span>播放 <b>96.4万</b></span><span>点赞 <b>8.7万</b></span><span>收藏 <b>3.2万</b></span></div>
+          </div>
+          <div class="acv-video-actions">
+            <button class="acv-icon-btn" type="button" data-acv-like>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9zM7 11l4-8a3 3 0 013 3v3h5a2 2 0 012 2.4l-1.3 6A2 2 0 0117.7 20H7"/></svg>
+              <span>赞 <b>8.7万</b></span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-save>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.6A4.4 4.4 0 0112 7a4.4 4.4 0 017 3.4c0 5-7 9.6-7 9.6z"/></svg>
+              <span>收藏</span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-share>分享</button>
+          </div>
+        </article>
+
+        <article class="acv-video-row">
+          <a class="acv-video-thumb" href="#acv-videos" aria-label="播放《木作台前的第400天》">
+            <svg viewBox="0 0 160 90" role="img" aria-label="木作工坊封面：工作台、木料与手持工具">
+              <rect width="160" height="90" fill="#2b2119"/>
+              <rect y="58" width="160" height="32" fill="#3d2f22"/>
+              <rect x="18" y="40" width="76" height="18" rx="3" fill="#8a5f3c"/>
+              <rect x="24" y="34" width="64" height="8" rx="3" fill="#a9774d"/>
+              <rect x="104" y="28" width="12" height="30" rx="3" fill="#c8b49a"/>
+              <path d="M110 28l10-10 8 8-10 10z" fill="#e8dfd1"/>
+              <circle cx="46" cy="30" r="9" fill="#d9a05b" opacity=".7"/>
+              <g fill="#ffb36b" opacity=".5"><circle cx="132" cy="18" r="2"/><circle cx="146" cy="30" r="1.6"/><circle cx="122" cy="40" r="1.4"/></g>
+              <path d="M0 58h160" stroke="#5b4632" stroke-width="2"/>
+            </svg>
+          </a>
+          <div class="acv-video-body">
+            <h3><a href="#acv-videos">木作台前的第 400 天：一张餐桌的诞生全过程</a></h3>
+            <p>从选料到打磨上蜡，完整记录一件家具的 11 道工序，并公开工时与材料成本。</p>
+            <div class="acv-video-tags"><span class="acv-tag">手作DIY</span><span class="acv-tag">创作幕后</span></div>
+            <div class="acv-video-meta"><span>创作者 <b>木言手作</b></span><span>播放 <b>42.1万</b></span><span>点赞 <b>3.6万</b></span><span>收藏 <b>1.9万</b></span></div>
+          </div>
+          <div class="acv-video-actions">
+            <button class="acv-icon-btn" type="button" data-acv-like>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9zM7 11l4-8a3 3 0 013 3v3h5a2 2 0 012 2.4l-1.3 6A2 2 0 0117.7 20H7"/></svg>
+              <span>赞 <b>3.6万</b></span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-save>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.6A4.4 4.4 0 0112 7a4.4 4.4 0 017 3.4c0 5-7 9.6-7 9.6z"/></svg>
+              <span>收藏</span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-share>分享</button>
+          </div>
+        </article>
+
+        <article class="acv-video-row">
+          <span class="acv-video-thumb">
+            <span class="acv-video-thumb-ph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l12 7-12 7z"/></svg>
+            </span>
+          </span>
+          <div class="acv-video-body">
+            <h3><a href="#acv-videos">手机也能拍出电影感：三个光位实战教程</a></h3>
+            <p>侧逆光、窗边柔光与单灯硬光逐一演示，附拍摄参数、镜头清单与后期思路。</p>
+            <div class="acv-video-tags"><span class="acv-tag">教程干货</span><span class="acv-tag">实用技巧</span></div>
+            <div class="acv-video-meta"><span>创作者 <b>光位研究所</b></span><span>播放 <b>65.8万</b></span><span>点赞 <b>5.4万</b></span><span>收藏 <b>4.1万</b></span></div>
+          </div>
+          <div class="acv-video-actions">
+            <button class="acv-icon-btn" type="button" data-acv-like>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9zM7 11l4-8a3 3 0 013 3v3h5a2 2 0 012 2.4l-1.3 6A2 2 0 0117.7 20H7"/></svg>
+              <span>赞 <b>5.4万</b></span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-save>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.6A4.4 4.4 0 0112 7a4.4 4.4 0 017 3.4c0 5-7 9.6-7 9.6z"/></svg>
+              <span>收藏</span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-share>分享</button>
+          </div>
+        </article>
+
+        <article class="acv-video-row">
+          <span class="acv-video-thumb">
+            <span class="acv-video-thumb-ph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l12 7-12 7z"/></svg>
+            </span>
+          </span>
+          <div class="acv-video-body">
+            <h3><a href="#acv-videos">老城区一天：早餐摊、修表铺与理发椅</a></h3>
+            <p>三组人物、三个时段、一条老街，用镜头观察在地文化里的日常秩序与温度。</p>
+            <div class="acv-video-tags"><span class="acv-tag">城市探索</span><span class="acv-tag">日常记录</span></div>
+            <div class="acv-video-meta"><span>创作者 <b>巷口观察</b></span><span>播放 <b>37.6万</b></span><span>点赞 <b>2.8万</b></span><span>收藏 <b>1.1万</b></span></div>
+          </div>
+          <div class="acv-video-actions">
+            <button class="acv-icon-btn" type="button" data-acv-like>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9zM7 11l4-8a3 3 0 013 3v3h5a2 2 0 012 2.4l-1.3 6A2 2 0 0117.7 20H7"/></svg>
+              <span>赞 <b>2.8万</b></span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-save>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.6A4.4 4.4 0 0112 7a4.4 4.4 0 017 3.4c0 5-7 9.6-7 9.6z"/></svg>
+              <span>收藏</span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-share>分享</button>
+          </div>
+        </article>
+
+        <article class="acv-video-row">
+          <span class="acv-video-thumb">
+            <span class="acv-video-thumb-ph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l12 7-12 7z"/></svg>
+            </span>
+          </span>
+          <div class="acv-video-body">
+            <h3><a href="#acv-videos">对话周澍：剪辑师的十年与被删掉的镜头</a></h3>
+            <p>关于取舍、节奏与团队协作的深度访谈，附完整时间轴与三段被删片段的复盘。</p>
+            <div class="acv-video-tags"><span class="acv-tag">人物访谈</span><span class="acv-tag">行业观察</span></div>
+            <div class="acv-video-meta"><span>创作者 <b>艾彩访谈组</b></span><span>播放 <b>28.7万</b></span><span>点赞 <b>2.1万</b></span><span>收藏 <b>9,600</b></span></div>
+          </div>
+          <div class="acv-video-actions">
+            <button class="acv-icon-btn" type="button" data-acv-like>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9zM7 11l4-8a3 3 0 013 3v3h5a2 2 0 012 2.4l-1.3 6A2 2 0 0117.7 20H7"/></svg>
+              <span>赞 <b>2.1万</b></span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-save>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.6A4.4 4.4 0 0112 7a4.4 4.4 0 017 3.4c0 5-7 9.6-7 9.6z"/></svg>
+              <span>收藏</span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-share>分享</button>
+          </div>
+        </article>
+
+        <article class="acv-video-row">
+          <span class="acv-video-thumb">
+            <span class="acv-video-thumb-ph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l12 7-12 7z"/></svg>
+            </span>
+          </span>
+          <div class="acv-video-body">
+            <h3><a href="#acv-videos">一杯咖啡的三分钟：小店清晨开店记录</a></h3>
+            <p>从磨豆到第一杯出品，记录一家社区咖啡馆的清晨秩序，适合作为治愈影像观看。</p>
+            <div class="acv-video-tags"><span class="acv-tag">生活方式</span><span class="acv-tag">治愈影像</span></div>
+            <div class="acv-video-meta"><span>创作者 <b>晨间五分钟</b></span><span>播放 <b>33.2万</b></span><span>点赞 <b>2.6万</b></span><span>收藏 <b>1.4万</b></span></div>
+          </div>
+          <div class="acv-video-actions">
+            <button class="acv-icon-btn" type="button" data-acv-like>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9zM7 11l4-8a3 3 0 013 3v3h5a2 2 0 012 2.4l-1.3 6A2 2 0 0117.7 20H7"/></svg>
+              <span>赞 <b>2.6万</b></span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-save>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.6A4.4 4.4 0 0112 7a4.4 4.4 0 017 3.4c0 5-7 9.6-7 9.6z"/></svg>
+              <span>收藏</span>
+            </button>
+            <button class="acv-icon-btn" type="button" data-acv-share>分享</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S4 专题企划 ================= -->
+  <section class="acv-section" id="acv-topics" aria-labelledby="acvTopicTitle">
+    <div class="acv-wrap">
+      <div class="acv-section-head">
+        <div>
+          <div class="acv-kicker">Series · 专题企划</div>
+          <h2 id="acvTopicTitle">艾彩原创视频正在更新的三组企划</h2>
+          <p>专题由平台发起、创作者共建，围绕同一主题持续产出，形成可追踪的内容生态。</p>
+        </div>
+        <a class="acv-btn acv-btn-blue" href="#acv-cta">申请联合企划</a>
+      </div>
+
+      <div class="acv-topics">
+        <article class="acv-topic">
+          <div class="acv-topic-cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="专题封面：城市夜行手记，路灯下的长街与行人剪影">
+              <rect width="400" height="225" fill="#131f36"/>
+              <circle cx="320" cy="52" r="26" fill="#ffd9c9" opacity=".3"/>
+              <g fill="#24395e"><rect x="16" y="74" width="70" height="110" rx="4"/><rect x="96" y="98" width="52" height="86" rx="4"/><rect x="330" y="88" width="54" height="96" rx="4"/></g>
+              <g fill="#ffb36b" opacity=".8"><rect x="26" y="86" width="12" height="14" rx="2"/><rect x="52" y="86" width="12" height="14" rx="2"/><rect x="26" y="116" width="12" height="14" rx="2"/><rect x="52" y="116" width="12" height="14" rx="2"/><rect x="340" y="100" width="12" height="14" rx="2"/><rect x="362" y="100" width="12" height="14" rx="2"/></g>
+              <rect y="184" width="400" height="41" fill="#0b1424"/>
+              <g stroke="#4d6fa8" stroke-width="3"><path d="M180 120v64"/><path d="M180 120h20"/><path d="M180 112l-6-10h12z" fill="#ffd9c9"/></g>
+              <ellipse cx="212" cy="196" rx="20" ry="6" fill="#3f6fd8" opacity=".35"/>
+              <g fill="#0a1220"><circle cx="212" cy="158" r="8"/><path d="M204 168h16l5 34h-26z"/></g>
+            </svg>
+          </div>
+          <div class="acv-topic-body">
+            <span class="acv-tag acv-tag-hot">更新中 · 第 4 集</span>
+            <h3>城市夜行手记</h3>
+            <p>以夜间影像为切口，记录不同城市的街区节奏、人物与声音，强调在地文化的真实质感。</p>
+            <div class="acv-topic-state"><span class="acv-dot"></span>已上线 4 集 · 每月更新 · 独家企划</div>
+            <ul class="acv-topic-items">
+              <li>第 1 集：路灯亮起后的十分钟</li>
+              <li>第 2 集：末班车与站台广播</li>
+              <li>第 3 集：夜市收摊的三十七分钟</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="acv-topic">
+          <div class="acv-topic-cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="专题封面：手作人时间，木工台与手工器具组合图形">
+              <rect width="400" height="225" fill="#2b2119"/>
+              <rect y="150" width="400" height="75" fill="#3b2d20"/>
+              <rect x="40" y="96" width="150" height="54" rx="6" fill="#8a5f3c"/>
+              <rect x="52" y="84" width="126" height="14" rx="6" fill="#a9774d"/>
+              <rect x="230" y="60" width="18" height="90" rx="5" fill="#c8b49a"/>
+              <path d="M239 60l18-18 14 14-18 18z" fill="#e8dfd1"/>
+              <circle cx="320" cy="70" r="20" fill="none" stroke="#d9a05b" stroke-width="4" opacity=".7"/>
+              <g fill="#ffb36b" opacity=".45"><circle cx="86" cy="52" r="3"/><circle cx="116" cy="38" r="2.2"/><circle cx="300" cy="130" r="2.6"/><circle cx="348" cy="160" r="2"/></g>
+              <path d="M20 150h360" stroke="#5b4632" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="acv-topic-body">
+            <span class="acv-tag acv-tag-green">更新中 · 第 7 集</span>
+            <h3>手作人时间</h3>
+            <p>走进不同手艺人的工作间，记录工具、材料与作息，呈现创作幕后最真实的工序与成本。</p>
+            <div class="acv-topic-state"><span class="acv-dot"></span>已上线 7 集 · 双周更新 · 创作者共建</div>
+            <ul class="acv-topic-items">
+              <li>陶艺：一只杯子的三次失败</li>
+              <li>皮具：缝线速度与耐心的平衡</li>
+              <li>木作：桌面收纳的一次改良</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="acv-topic">
+          <div class="acv-topic-cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="专题封面：镜头之外访谈录，话筒与剪辑时间轴图形">
+              <rect width="400" height="225" fill="#1c2c4c"/>
+              <rect x="120" y="42" width="160" height="96" rx="8" fill="#273c63"/>
+              <rect x="134" y="56" width="132" height="58" rx="4" fill="#3f6fd8" opacity=".5"/>
+              <path d="M188 74l22 12-22 12z" fill="#fff" opacity=".9"/>
+              <rect x="134" y="124" width="86" height="7" rx="3" fill="#1a2b48"/>
+              <rect x="60" y="164" width="280" height="12" rx="6" fill="#22375c"/>
+              <g fill="#ff6b5e"><rect x="72" y="164" width="34" height="12" rx="6"/><rect x="150" y="164" width="58" height="12" rx="6"/><rect x="262" y="164" width="42" height="12" rx="6"/></g>
+              <g stroke="#8fb0ea" stroke-width="2" opacity=".6"><path d="M300 46v96"/><circle cx="300" cy="46" r="6" fill="#8fb0ea"/><circle cx="300" cy="142" r="6" fill="#8fb0ea"/></g>
+            </svg>
+          </div>
+          <div class="acv-topic-body">
+            <span class="acv-tag">更新中 · 第 2 集</span>
+            <h3>镜头之外访谈录</h3>
+            <p>与剪辑师、摄影指导、制片人对话，讨论行业观察与职业成长，提供完整访谈摘录。</p>
+            <div class="acv-topic-state"><span class="acv-dot"></span>已上线 2 集 · 月度更新 · 官方发布</div>
+            <ul class="acv-topic-items">
+              <li>周澍：被删掉的镜头也值得被讨论</li>
+              <li>苏黎：制片表背后的时间管理</li>
+              <li>预告：年轻团队如何分工协作</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S4 品牌解析（关键词解析 800 字以上） ================= -->
+  <section class="acv-section" id="acv-brand" aria-labelledby="acvBrandTitle">
+    <div class="acv-wrap">
+      <div class="acv-section-head">
+        <div>
+          <div class="acv-kicker">Brand · 关键词深度解析</div>
+          <h2 id="acvBrandTitle">读懂“艾彩原创视频”：一个原创影像品牌的四个侧面</h2>
+          <p>为什么一个视频平台要坚持原创、正版与高清？我们从内容、创作者、社区与长期运营四条线展开说明。</p>
+        </div>
+      </div>
+
+      <div class="acv-about">
+        <div class="acv-about-copy">
+          <p>“艾彩”二字取自对色彩与光线的偏爱：艾是草木的颜色，彩是镜头的层次。艾彩原创视频从创立之初就确定了一件事——只做原创、只做正版、只做高清。这不是一句口号，而是贯穿选题、拍摄、审核、上线与分发的完整流程。作为一家持续运营的影像企业，我们把内容质量放在增长速度之前，把创作者权益放在短期流量之前，也因此积累了相对稳定的口碑与用户信任。</p>
+
+          <h3>内容层面：垂直领域的精品内容如何被生产</h3>
+          <p>艾彩原创视频的内容生产分为三条线。第一条是编辑部企划线，由平台立项、签约创作者执行，例如《城市夜行手记》这类需要跨城市协作的纪录片专题，编辑部负责前期调研、拍摄协调与后期统一调色，保证成片在视觉与叙事上的一致性。第二条是创作者自主线，签约或非签约创作者均可在平台上传作品，平台提供选题建议、封面规范与发布节奏参考，但不干预创作表达，只做基本的事实核查与版权校验。第三条是联合共创线，与高校影像社团、地方文旅机构、独立工作室合作，用比赛、挑战、投票等方式征集作品，让更多元的声音进入内容生态。</p>
+          <p>三条线共同构成了艾彩原创视频的垂直内容结构：纪录、教程、访谈、生活记录四类内容约占平台内容的七成，其余为实验短片、音乐现场与手作过程记录。我们并不追求覆盖所有品类，而是希望在“原创影像”这个垂直领域里做到行业领先的完成度——从画面清晰度、声音处理到字幕规范，都有可复用的内部标准。</p>
+
+          <h3>创作者层面：一个平台怎样陪伴创作者成长</h3>
+          <p>对创作者而言，最难的不是第一次上传，而是第 50 次上传之后还能不能继续。艾彩原创视频把创作者支持拆成四件具体的事：一是稳定的分成机制，播放、收藏与专题采用分别计价的规则，结算周期固定；二是可查的数据面板，完播率、观众停留与来源构成都对创作者开放，帮助判断选题是否成立；三是成长路径，新人榜、专题推荐位与联合企划构成三级曝光阶梯，避免流量只集中在头部；四是社群支持，每月固定的创作者线上交流会与线下拍摄活动，让人能互相借设备、借场地、借经验。我们相信，陪伴不是一句温暖的话，而是一套能被验证的机制。</p>
+          <p>截至目前，平台签约创作者超过 3600 位，其中超过四成是近两年内首次接触专业影像制作的普通人。他们中的一部分人从记录自己的日常开始，逐步转向深度测评、教程干货与人物访谈。这种成长路径是艾彩原创视频最看重的部分——平台的价值不在于制造少数爆款，而在于让更多人具备持续创作的能力。</p>
+
+          <h3>社区层面：真实、温暖与可讨论的公共空间</h3>
+          <p>评论区是艾彩原创视频投入最多精力维护的地方之一。我们设置了分层审核机制：机器先过滤明显违规内容，人工再处理争议性表达，同时保留“有理有据的批评”。在平台看来，真实的社区不是只有赞美，而是允许观众指出镜头晃动、字幕错误、信息不准确。很多创作者会在评论区的建议下重剪版本，或在下一条视频里公开回应。这种互动让内容具备了持续改进的可能，也让“温暖”不至于变成客套。</p>
+          <p>为了让社区更有活力，平台定期发起轻量互动：为喜欢的作品投票、为专题提交选题、参与拍摄挑战。2026 年冬季的“冬日影像挑战”已经开放报名，主题是“一段三分钟内的冬日日常”，不限设备，不限风格，鼓励用手机完成。类似活动不以流量为唯一评价标准，而更看重叙事完整度与表达的真诚度，这也是艾彩原创视频区别于纯算法平台的地方。</p>
+
+          <h3>运营层面：长期主义与社会责任</h3>
+          <p>视频平台的竞争常常被简化为内容数量与推荐效率，但艾彩原创视频更在意两件事：版权与教育。版权方面，平台对上传内容做音轨与画面的双重比对，对二次剪辑明确标注规则，对侵权投诉设立快速通道；教育方面，平台与多所院校合作开放影像课程，把拍摄、收音、剪辑的基础知识做成免费教程，让刚入门的创作者少走弯路。这些工作不会立刻带来流量，却决定了一个内容生态能否长期健康。</p>
+          <p>作为官方网站，这里同时承载品牌信息、企业动态与官方发布职责。我们公开合作规则、分成说明与内容标准，也公开每一次规则调整的原因与生效日期。用户至上是艾彩原创视频的底线：不滥用推荐位，不用夸张标题诱导点击，不把创作者的作品当作一次性消耗品。我们更愿意用一部一部作品，去证明原创影像依然值得被认真对待。</p>
+        </div>
+
+        <aside class="acv-about-aside" aria-label="品牌信息摘要">
+          <div class="acv-aside-card">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.9-4.8 4.6 1.2 6.6L12 17.1 6.1 20.3l1.2-6.6L2.5 9.1l6.6-.9z"/></svg>
+              品牌速览
+            </h3>
+            <ul class="acv-fact-list">
+              <li><span>品牌定位</span><b>原创影像内容平台</b></li>
+              <li><span>内容方向</span><b>纪录 / 教程 / 访谈 / 生活</b></li>
+              <li><span>上线标准</span><b>正版 · 高清 · 可溯源</b></li>
+              <li><span>创作者规模</span><b>3600+ 位</b></li>
+              <li><span>持续运营</span><b>自 2019 年起</b></li>
+            </ul>
+          </div>
+          <div class="acv-aside-card">
+            <div class="acv-aside-mini">
+              <svg viewBox="0 0 320 200" role="img" aria-label="品牌构图：取景框与彩色色块排布">
+                <rect width="320" height="200" fill="#eef2fb"/>
+                <rect x="34" y="34" width="120" height="132" rx="10" fill="#1b2a4a"/>
+                <rect x="52" y="52" width="84" height="52" rx="5" fill="#3f6fd8"/>
+                <path d="M84 66l22 12-22 12z" fill="#fff"/>
+                <rect x="52" y="118" width="60" height="8" rx="4" fill="#4e6b9e"/>
+                <rect x="52" y="136" width="42" height="8" rx="4" fill="#4e6b9e"/>
+                <rect x="180" y="34" width="106" height="60" rx="10" fill="#ff6b5e"/>
+                <rect x="180" y="106" width="106" height="60" rx="10" fill="#ffd9c9"/>
+                <circle cx="233" cy="64" r="12" fill="#fff" opacity=".85"/>
+                <circle cx="212" cy="136" r="8" fill="#ff6b5e" opacity=".7"/>
+              </svg>
+            </div>
+            <h3>内容标准摘录</h3>
+            <p style="font-size:13px;color:var(--acv-muted);line-height:1.8">画面上传不低于 1080P；音频需做基础降噪；字幕与口播须一致；引用素材须注明来源。标准公开可查，欢迎监督。</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S5 创作者矩阵 ================= -->
+  <section class="acv-section" id="acv-authors" aria-labelledby="acvAuthorTitle">
+    <div class="acv-wrap">
+      <div class="acv-section-head">
+        <div>
+          <div class="acv-kicker">Creators · 创作者矩阵</div>
+          <h2 id="acvAuthorTitle">艾彩原创视频的六位常驻创作者</h2>
+          <p>他们分别从纪录、手作、教程、访谈、生活与声音设计切入，构成平台最稳定的内容供给。</p>
+        </div>
+        <button class="acv-btn acv-btn-ghost" type="button" data-acv-open="submit">成为创作者</button>
+      </div>
+
+      <div class="acv-authors">
+        <article class="acv-author">
+          <span class="acv-avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" aria-label="创作者林岸纪实头像：深蓝底与相机轮廓">
+              <rect width="64" height="64" fill="#1b2a4a"/>
+              <rect x="16" y="22" width="32" height="22" rx="5" fill="#3f6fd8"/>
+              <circle cx="32" cy="33" r="7" fill="#e8eefc"/>
+              <circle cx="32" cy="33" r="3" fill="#1b2a4a"/>
+              <rect x="24" y="18" width="10" height="5" rx="2" fill="#ff6b5e"/>
+            </svg>
+          </span>
+          <div class="acv-author-body">
+            <div class="acv-author-top"><h3>林岸纪实</h3><span class="acv-author-field">城市纪录</span></div>
+            <div class="acv-author-nums"><span>作品 <b>86</b></span><span>粉丝 <b>42.6万</b></span><span>系列 <b>5</b></span></div>
+            <p class="acv-author-desc">纪录片导演，长期拍摄城市夜行与街区人物。《雨夜取景器》企划主创，习惯在雨里等一个真实的路人表情，作品节奏偏慢但信息密度高。</p>
+            <a class="acv-author-more" href="#" data-acv-author="林岸纪实">查看创作者档案 →</a>
+          </div>
+          <div class="acv-author-tags"><span class="acv-tag">城市探索</span><span class="acv-tag">在地文化</span></div>
+        </article>
+
+        <article class="acv-author">
+          <span class="acv-avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" aria-label="创作者木言手作头像：暖棕底与木刨与木纹">
+              <rect width="64" height="64" fill="#3d2f22"/>
+              <rect x="12" y="34" width="40" height="12" rx="4" fill="#a9774d"/>
+              <path d="M20 34V22h8v12z" fill="#c8b49a"/>
+              <path d="M30 30l16-10 4 6-16 10z" fill="#e8dfd1"/>
+              <circle cx="48" cy="44" r="5" fill="#ffb36b" opacity=".8"/>
+            </svg>
+          </span>
+          <div class="acv-author-body">
+            <div class="acv-author-top"><h3>木言手作</h3><span class="acv-author-field">手作 DIY</span></div>
+            <div class="acv-author-nums"><span>作品 <b>64</b></span><span>粉丝 <b>28.3万</b></span><span>系列 <b>3</b></span></div>
+            <p class="acv-author-desc">木工与皮具双修的手作人，视频以工序记录为主，会公开材料成本与失败次数。镜头稳定、讲解克制，被观众称为“最省钱的教程作者”。</p>
+            <a class="acv-author-more" href="#" data-acv-author="木言手作">查看创作者档案 →</a>
+          </div>
+          <div class="acv-author-tags"><span class="acv-tag">创作幕后</span><span class="acv-tag">实用技巧</span></div>
+        </article>
+
+        <article class="acv-author">
+          <span class="acv-avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" aria-label="创作者光位研究所头像：灰蓝底与光线角度图示">
+              <rect width="64" height="64" fill="#2c3e63"/>
+              <circle cx="26" cy="26" r="9" fill="#ffd9c9"/>
+              <path d="M26 36v16M18 44h16" stroke="#8fb0ea" stroke-width="3" stroke-linecap="round"/>
+              <path d="M40 18l12 22H28z" fill="#ff6b5e" opacity=".55"/>
+            </svg>
+          </span>
+          <div class="acv-author-body">
+            <div class="acv-author-top"><h3>光位研究所</h3><span class="acv-author-field">摄影教程</span></div>
+            <div class="acv-author-nums"><span>作品 <b>112</b></span><span>粉丝 <b>53.1万</b></span><span>系列 <b>6</b></span></div>
+            <p class="acv-author-desc">专注布光与拍摄技巧的教程作者，擅长用最简单的设备讲清原理。每条视频附参数与清单，被大量初学者收藏作为入门资料。</p>
+            <a class="acv-author-more" href="#" data-acv-author="光位研究所">查看创作者档案 →</a>
+          </div>
+          <div class="acv-author-tags"><span class="acv-tag">教程干货</span><span class="acv-tag">知识科普</span></div>
+        </article>
+
+        <article class="acv-author">
+          <span class="acv-avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" aria-label="创作者巷口观察头像：墨绿底与街巷透视">
+              <rect width="64" height="64" fill="#1f3d34"/>
+              <path d="M10 52L24 18h16l14 34z" fill="#2f6b58"/>
+              <path d="M26 52V34h12v18z" fill="#e6f6ec"/>
+              <circle cx="46" cy="18" r="7" fill="#ffd9c9" opacity=".8"/>
+              <path d="M10 52h44" stroke="#8fd4b6" stroke-width="2"/>
+            </svg>
+          </span>
+          <div class="acv-author-body">
+            <div class="acv-author-top"><h3>巷口观察</h3><span class="acv-author-field">生活记录</span></div>
+            <div class="acv-author-nums"><span>作品 <b>73</b></span><span>粉丝 <b>21.9万</b></span><span>系列 <b>4</b></span></div>
+            <p class="acv-author-desc">拍摄老城区日常的记录者，偏爱长镜头与同期声。作品常以一天为结构，用三组人物串起街区的时间，评论区常变成本地地图。</p>
+            <a class="acv-author-more" href="#" data-acv-author="巷口观察">查看创作者档案 →</a>
+          </div>
+          <div class="acv-author-tags"><span class="acv-tag">日常记录</span><span class="acv-tag">在地文化</span></div>
+        </article>
+
+        <article class="acv-author">
+          <span class="acv-avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" aria-label="创作者艾彩访谈组头像：深紫底与对话气泡图形">
+              <rect width="64" height="64" fill="#332c4d"/>
+              <rect x="12" y="16" width="30" height="20" rx="7" fill="#8f7fd4"/>
+              <path d="M20 36l-4 8 10-8z" fill="#8f7fd4"/>
+              <rect x="30" y="30" width="24" height="16" rx="6" fill="#ff6b5e"/>
+              <path d="M46 46l3 6-9-6z" fill="#ff6b5e"/>
+            </svg>
+          </span>
+          <div class="acv-author-body">
+            <div class="acv-author-top"><h3>艾彩访谈组</h3><span class="acv-author-field">人物访谈</span></div>
+            <div class="acv-author-nums"><span>作品 <b>48</b></span><span>粉丝 <b>36.7万</b></span><span>系列 <b>3</b></span></div>
+            <p class="acv-author-desc">平台官方访谈团队，负责《镜头之外访谈录》的策划与执行。采访对象覆盖剪辑、摄影、制片与独立工作室，坚持保留受访者的原话。</p>
+            <a class="acv-author-more" href="#" data-acv-author="艾彩访谈组">查看创作者档案 →</a>
+          </div>
+          <div class="acv-author-tags"><span class="acv-tag">人物访谈</span><span class="acv-tag">行业观察</span></div>
+        </article>
+
+        <article class="acv-author">
+          <span class="acv-avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" aria-label="创作者晨间五分钟头像：米白底与咖啡杯与晨光">
+              <rect width="64" height="64" fill="#f3ece0"/>
+              <circle cx="46" cy="18" r="10" fill="#ffd0a8"/>
+              <rect x="16" y="26" width="26" height="22" rx="5" fill="#8a5f3c"/>
+              <path d="M42 32h5a5 5 0 010 10h-5z" fill="#8a5f3c"/>
+              <path d="M22 22c2-4 6-4 8 0" stroke="#c8b49a" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M16 52h34" stroke="#d9c8ae" stroke-width="2"/>
+            </svg>
+          </span>
+          <div class="acv-author-body">
+            <div class="acv-author-top"><h3>晨间五分钟</h3><span class="acv-author-field">生活方式</span></div>
+            <div class="acv-author-nums"><span>作品 <b>95</b></span><span>粉丝 <b>31.4万</b></span><span>系列 <b>5</b></span></div>
+            <p class="acv-author-desc">以清晨为主题的生活影像作者，记录开店、通勤、早餐与会面。拍摄多用自然光，成片安静，被不少观众当作工作日的背景音。</p>
+            <a class="acv-author-more" href="#" data-acv-author="晨间五分钟">查看创作者档案 →</a>
+          </div>
+          <div class="acv-author-tags"><span class="acv-tag">治愈影像</span><span class="acv-tag">生活方式</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S6 口碑评价 ================= -->
+  <section class="acv-section" id="acv-reviews" aria-labelledby="acvReviewTitle">
+    <div class="acv-wrap">
+      <div class="acv-section-head">
+        <div>
+          <div class="acv-kicker">Reviews · 用户口碑</div>
+          <h2 id="acvReviewTitle">来自观众与创作者的真实评价</h2>
+          <p>评价内容来自站内互动与公开反馈，保留原始语气与长度差异，不做统一润色。</p>
+        </div>
+        <button class="acv-btn acv-btn-ghost" type="button" data-acv-open="feedback">提交反馈</button>
+      </div>
+
+      <div class="acv-reviews">
+        <article class="acv-review">
+          <div class="acv-review-top">
+            <span class="acv-review-ava" style="background:#3f6fd8" aria-hidden="true">顾</span>
+            <div><div class="acv-review-name">顾青禾</div><div class="acv-review-date">2026-11-18</div></div>
+            <span class="acv-stars" aria-label="评分 5 分">★★★★★</span>
+          </div>
+          <p>《雨夜取景器》是我今年看过最稳的城市纪录片，声音处理尤其好，雨声没有被配乐压掉。看完顺手把拍摄地图存了下来，周末准备照着走一遍。</p>
+          <span class="acv-tag">纪录片爱好者</span>
+        </article>
+
+        <article class="acv-review">
+          <div class="acv-review-top">
+            <span class="acv-review-ava" style="background:#e14b3d" aria-hidden="true">沈</span>
+            <div><div class="acv-review-name">沈之南</div><div class="acv-review-date">2026-11-15</div></div>
+            <span class="acv-stars" aria-label="评分 4 分">★★★★☆</span>
+          </div>
+          <p>教程类内容质量很在线，但个别视频的示例素材重复用了两次，希望后续可以更新一下。整体还是比大多数平台靠谱，至少参数是真的。</p>
+          <span class="acv-tag">新手创作者</span>
+        </article>
+
+        <article class="acv-review">
+          <div class="acv-review-top">
+            <span class="acv-review-ava" style="background:#1f8a4c" aria-hidden="true">罗</span>
+            <div><div class="acv-review-name">罗一舟</div><div class="acv-review-date">2026-11-12</div></div>
+            <span class="acv-stars" aria-label="评分 5 分">★★★★★</span>
+          </div>
+          <p>从投稿到上线花了六天，审核意见写得很具体，连字幕位置偏移都标出来了。作为一个刚拍片两年的普通人，这种认真程度让人愿意继续上传。</p>
+          <span class="acv-tag">签约创作者</span>
+        </article>
+
+        <article class="acv-review">
+          <div class="acv-review-top">
+            <span class="acv-review-ava" style="background:#8f7fd4" aria-hidden="true">许</span>
+            <div><div class="acv-review-name">许知微</div><div class="acv-review-date">2026-11-09</div></div>
+            <span class="acv-stars" aria-label="评分 5 分">★★★★★</span>
+          </div>
+          <p>喜欢这里的评论区。大家会认真讨论镜头为什么要这样切，也会指出哪里信息不准确。很少见到这么平静但不冷清的社区。</p>
+          <span class="acv-tag">长期用户</span>
+        </article>
+
+        <article class="acv-review">
+          <div class="acv-review-top">
+            <span class="acv-review-ava" style="background:#c99a3a" aria-hidden="true">郑</span>
+            <div><div class="acv-review-name">郑柏言</div><div class="acv-review-date">2026-11-06</div></div>
+            <span class="acv-stars" aria-label="评分 4 分">★★★★☆</span>
+          </div>
+          <p>手作系列的工序记录很细，材料成本也公开了，对入门者特别友好。唯一小建议是希望增加一个可下载的材料清单。</p>
+          <span class="acv-tag">手作爱好者</span>
+        </article>
+
+        <article class="acv-review">
+          <div class="acv-review-top">
+            <span class="acv-review-ava" style="background:#2f6b8a" aria-hidden="true">柳</span>
+            <div><div class="acv-review-name">柳青与</div><div class="acv-review-date">2026-11-03</div></div>
+            <span class="acv-stars" aria-label="评分 5 分">★★★★★</span>
+          </div>
+          <p>用艾彩的教程带学生做了一次拍摄作业，从布光到收音都有可操作的步骤，学生反馈比看教材有效得多。希望保持更新频率。</p>
+          <span class="acv-tag">影像教师</span>
+        </article>
+
+        <article class="acv-review">
+          <div class="acv-review-top">
+            <span class="acv-review-ava" style="background:#5b6b8c" aria-hidden="true">裴</span>
+            <div><div class="acv-review-name">裴寻</div><div class="acv-review-date">2026-10-30</div></div>
+            <span class="acv-stars" aria-label="评分 4 分">★★★★☆</span>
+          </div>
+          <p>专题企划的完成度明显高于普通内容，有统一调色和片头，观感很整。就是每月更新一集有点慢，等得着急。</p>
+          <span class="acv-tag">专题观众</span>
+        </article>
+
+        <article class="acv-review">
+          <div class="acv-review-top">
+            <span class="acv-review-ava" style="background:#a9552f" aria-hidden="true">温</span>
+            <div><div class="acv-review-name">温其言</div><div class="acv-review-date">2026-10-27</div></div>
+            <span class="acv-stars" aria-label="评分 5 分">★★★★★</span>
+          </div>
+          <p>合作过一次联合企划，沟通节奏清晰，编辑部会给参考案例但不会强行改创意。结算也准时，这点对独立工作室很重要。</p>
+          <span class="acv-tag">合作工作室</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S7 企业动态 + 合作 ================= -->
+  <section class="acv-section" id="acv-news" aria-labelledby="acvNewsTitle">
+    <div class="acv-wrap">
+      <div class="acv-section-head">
+        <div>
+          <div class="acv-kicker">News · 企业动态</div>
+          <h2 id="acvNewsTitle">艾彩原创视频近期官方发布</h2>
+          <p>规则调整、活动开启与产品更新，统一在此同步，确保创作者与观众都能第一时间获知。</p>
+        </div>
+      </div>
+
+      <div class="acv-two-col">
+        <ol class="acv-timeline">
+          <li>
+            <time datetime="2026-11-22">2026-11-22</time>
+            <h3>创作者分成计划 2.0 正式生效</h3>
+            <p>新增“专题权重”与“完播加成”两项指标，结算周期由自然月调整为双周，历史收益不受影响，详细规则可在创作者后台查阅。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-18">2026-11-18</time>
+            <h3>“冬日影像挑战”开启报名</h3>
+            <p>主题为三分钟内的冬日日常，不限设备与风格，报名截止 12 月 8 日。入选作品将进入首页专题并获得联合企划推荐位。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-11">2026-11-11</time>
+            <h3>《城市夜行手记》第 4 集上线</h3>
+            <p>本集拍摄于沿海城市的老码头，采用同步收音与长镜头结构，4K 高清正版首发，配套导演手记同步发布于品牌专栏。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-05">2026-11-05</time>
+            <h3>内容审核细则更新说明</h3>
+            <p>细化引用素材标注要求与二次剪辑规则，新增侵权快速处理通道，处理时效由 5 个工作日缩短至 2 个工作日。</p>
+          </li>
+          <li>
+            <time datetime="2026-10-28">2026-10-28</time>
+            <h3>影厅放映合作计划启动</h3>
+            <p>与三座城市的独立放映空间达成合作，优秀原创作品将进入线下小规模放映，创作者可申请作品授权与到场交流。</p>
+          </li>
+        </ol>
+
+        <aside class="acv-partners" aria-labelledby="acvPartnerTitle">
+          <h3 id="acvPartnerTitle">合作品牌与伙伴</h3>
+          <div class="acv-partner-grid">
+            <a class="acv-partner" href="#acv-news">影像器材工坊</a>
+            <a class="acv-partner" href="#acv-news">城市文旅机构</a>
+            <a class="acv-partner" href="#acv-news">独立放映空间</a>
+            <a class="acv-partner" href="#acv-news">高校影像社团</a>
+            <a class="acv-partner" href="#acv-news">声音设计工作室</a>
+            <a class="acv-partner" href="#acv-news">社区咖啡馆联盟</a>
+          </div>
+          <p class="acv-note">合作以内容共创与线下活动为主，不涉及流量采购。我们更倾向与尊重创作者权益的伙伴长期同行。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S7 FAQ ================= -->
+  <section class="acv-section" id="acv-faq" aria-labelledby="acvFaqTitle">
+    <div class="acv-wrap">
+      <div class="acv-section-head">
+        <div>
+          <div class="acv-kicker">FAQ · 帮助中心</div>
+          <h2 id="acvFaqTitle">关于艾彩原创视频的常见问题</h2>
+          <p>关于投稿、审核、版权与观看的六个高频问题，点击即可展开查看。</p>
+        </div>
+      </div>
+
+      <div class="acv-faq">
+        <details open>
+          <summary>如何向艾彩原创视频投稿？</summary>
+          <p>点击页面右上角“投稿”按钮填写作品信息，上传不低于 1080P 的成片与封面，并附上素材来源说明。平台会在 3 个工作日内给出初审意见，通过后进入排期。</p>
+        </details>
+        <details>
+          <summary>平台对原创与正版的要求是什么？</summary>
+          <p>作品须为本人或团队原创，引用他人素材需明确标注来源与授权情况。平台会对音轨与画面做比对，侵权内容不予上线；已上线内容若收到有效投诉，会先行下架核查。</p>
+        </details>
+        <details>
+          <summary>创作者分成如何计算与结算？</summary>
+          <p>分成由播放、收藏与专题权重共同构成，双周结算一次。创作者后台可查看每一条视频的收益明细，结算记录保留可查，规则调整会提前 15 天在官方发布区公告。</p>
+        </details>
+        <details>
+          <summary>观看需要付费吗？</summary>
+          <p>大部分内容免费观看，部分企划专题提供高清下载与无广告版本，面向注册用户开放。所有收费项目均在页面明确标注，不存在自动续费陷阱。</p>
+        </details>
+        <details>
+          <summary>可以申请联合企划或合作吗？</summary>
+          <p>可以。请在反馈弹窗中选择“合作咨询”，附上团队介绍与过往作品链接。我们优先考虑主题契合、制作规范、尊重创作者权益的合作方。</p>
+        </details>
+        <details>
+          <summary>发现内容错误或违规如何反馈？</summary>
+          <p>在视频页点击反馈入口，选择“内容纠错”或“违规举报”，填写具体时间点与问题描述。我们会在 48 小时内响应，并对有效反馈给予站内积分奖励。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S7 CTA 投稿 ================= -->
+  <section class="acv-section" id="acv-cta" aria-labelledby="acvCtaTitle">
+    <div class="acv-wrap">
+      <div class="acv-cta">
+        <div>
+          <h2 id="acvCtaTitle">把你拍下的那一段，交给艾彩原创视频</h2>
+          <p>无论是一部完整的纪录片，还是三分钟的日常记录，只要真实、清晰、有表达，我们都愿意给它一个被看见的位置。平台提供上传、审核、推荐与分成的一站式支持。</p>
+        </div>
+        <div class="acv-cta-actions">
+          <button class="acv-btn acv-btn-primary" type="button" data-acv-open="submit">立即投稿</button>
+          <button class="acv-btn acv-btn-ghost" type="button" data-acv-share>分享官网</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= S8 页脚 ================= -->
+<footer class="acv-footer">
+  <div class="acv-wrap">
+    <div class="acv-footer-grid">
+      <div>
+        <div class="acv-footer-brand">
+          <span class="acv-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l12 7-12 7z"/></svg>
+          </span>
+          <strong>艾彩原创视频</strong>
+        </div>
+        <p>艾彩原创视频官方网站，专注原创影像内容生态，坚持正版、高清与匠心制作，为创作者与企业搭建值得信赖的内容平台。持续运营中，欢迎每一位认真拍片的人。</p>
+      </div>
+      <div>
+        <h4>浏览内容</h4>
+        <ul>
+          <li><a href="#acv-focus">焦点内容</a></li>
+          <li><a href="#acv-videos">热门视频</a></li>
+          <li><a href="#acv-topics">专题企划</a></li>
+          <li><a href="#acv-authors">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>品牌与帮助</h4>
+        <ul>
+          <li><a href="#acv-brand">品牌解析</a></li>
+          <li><a href="#acv-news">企业动态</a></li>
+          <li><a href="#acv-reviews">用户口碑</a></li>
+          <li><a href="#acv-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与共建</h4>
+        <ul>
+          <li><a href="#acv-cta">创作投稿</a></li>
+          <li><a href="#acv-cta">联合企划</a></li>
+          <li><a href="#acv-faq">合作咨询</a></li>
+          <li><a href="#acv-faq">内容反馈</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="acv-footer-bottom">
+      <span>© 2019-2026 艾彩原创视频 版权所有 · 官方网站 · 持续运营中</span>
+      <span>内容备案编号 ACV-2026-1108 · 网络文化经营许可（示例）</span>
+      <a href="#acv-top">回到顶部 ↑</a>
+    </div>
+  </div>
+</footer>
+
+<button class="acv-to-top" id="acvToTop" type="button" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="acv-toast" id="acvToast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗 -->
+<div class="acv-modal" id="acvModal" role="dialog" aria-modal="true" aria-labelledby="acvModalTitle">
+  <div class="acv-modal-box">
+    <div class="acv-modal-head">
+      <div>
+        <h3 id="acvModalTitle">投稿</h3>
+        <p id="acvModalSub">填写基本信息，我们会在 3 个工作日内联系你</p>
+      </div>
+      <button class="acv-modal-close" type="button" id="acvModalClose" aria-label="关闭弹窗">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div id="acvModalBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var toastEl = document.getElementById('acvToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2400);
+  }
+
+  /* ---------- 移动端导航折叠 ---------- */
+  var navToggle = document.getElementById('acvNavToggle');
+  var nav = document.getElementById('acvNav');
+  navToggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', open ? '收起导航' : '展开导航');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      nav.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* ---------- 搜索反馈 ---------- */
+  var input = document.getElementById('acvSearchInput');
+  var feedback = document.getElementById('acvSearchFeedback');
+  var searchBtn = document.getElementById('acvSearchBtn');
+  var keywords = [
+    {k:'雨夜', t:'《雨夜取景器》全片', tag:'城市纪录'},
+    {k:'手作', t:'木作台前的第 400 天', tag:'手作 DIY'},
+    {k:'教程', t:'手机也能拍出电影感', tag:'教程干货'},
+    {k:'访谈', t:'对话周澍：剪辑师的十年', tag:'人物访谈'},
+    {k:'城市', t:'老城区一天', tag:'城市探索'},
+    {k:'咖啡', t:'一杯咖啡的三分钟', tag:'生活方式'},
+    {k:'创作', t:'创作者分成计划 2.0', tag:'官方发布'},
+    {k:'投稿', t:'冬日影像挑战报名中', tag:'活动'}
+  ];
+  function doSearch(){
+    var q = (input.value || '').trim();
+    if(!q){
+      feedback.innerHTML = '输入关键词，可搜索<b>视频、专题与创作者</b><span class="acv-sf-hint">试试：雨夜 / 手作 / 教程</span>';
+      feedback.classList.add('is-open');
+      return;
+    }
+    var hits = keywords.filter(function(item){
+      return item.k.indexOf(q) > -1 || item.t.indexOf(q) > -1 || item.tag.indexOf(q) > -1;
+    });
+    if(hits.length){
+      feedback.innerHTML = '找到 ' + hits.length + ' 条与“<strong>' + q.replace(/[<>&]/g,'') + '</strong>”相关的内容：<br>' +
+        hits.slice(0,3).map(function(h){ return '· ' + h.t + '（' + h.tag + '）'; }).join('<br>') +
+        '<span class="acv-sf-hint">按回车或点击搜索按钮继续查看</span>';
+    }else{
+      feedback.innerHTML = '暂未找到与“<strong>' + q.replace(/[<>&]/g,'') + '</strong>”直接匹配的内容<span class="acv-sf-hint">试试：雨夜 / 访谈 / 咖啡</span>';
+    }
+    feedback.classList.add('is-open');
+  }
+  searchBtn.addEventListener('click', doSearch);
+  input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+  input.addEventListener('input', function(){ if(!input.value.trim()){ feedback.classList.remove('is-open'); } });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.acv-search')){ feedback.classList.remove('is-open'); }
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  function parseNum(txt){
+    txt = txt.replace(/[^\d.万]/g,'');
+    if(txt.indexOf('万') > -1) return Math.round(parseFloat(txt) * 10000);
+    return parseInt(txt, 10) || 0;
+  }
+  function formatNum(n){
+    if(n >= 10000){
+      var v = (n/10000).toFixed(1).replace(/\.0$/,'');
+      return v + '万';
+    }
+    return String(n);
+  }
+  document.querySelectorAll('[data-acv-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var span = btn.querySelector('span');
+      var raw = span.textContent.replace(/^赞\s*/,'');
+      var num = parseNum(raw);
+      if(btn.classList.contains('is-liked')){
+        num = Math.max(0, num - 1);
+        btn.classList.remove('is-liked');
+        btn.setAttribute('aria-pressed','false');
+        toast('已取消点赞');
+      }else{
+        num = num + 1;
+        btn.classList.add('is-liked');
+        btn.setAttribute('aria-pressed','true');
+        toast('已点赞，感谢支持原创');
+      }
+      span.innerHTML = '赞 <b>' + formatNum(num) + '</b>';
+    });
+  });
+  document.querySelectorAll('[data-acv-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('is-saved');
+      var span = btn.querySelector('span');
+      span.textContent = saved ? '已收藏' : '收藏';
+      btn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+      toast(saved ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 弹窗系统 ---------- */
+  var modal = document.getElementById('acvModal');
+  var modalTitle = document.getElementById('acvModalTitle');
+  var modalSub = document.getElementById('acvModalSub');
+  var modalBody = document.getElementById('acvModalBody');
+  var lastFocus = null;
+
+  function openModal(){
+    lastFocus = document.activeElement;
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    var first = modalBody.querySelector('input, textarea, select, button');
+    if(first){ setTimeout(function(){ first.focus(); }, 120); }
+  }
+  function closeModal(){
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    if(lastFocus && lastFocus.focus){ lastFocus.focus(); }
+  }
+  document.getElementById('acvModalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('is-open')){ closeModal(); } });
+
+  var templates = {
+    submit: function(){
+      modalTitle.textContent = '创作投稿';
+      modalSub.textContent = '填写基本信息，编辑会在 3 个工作日内回复初审意见';
+      modalBody.innerHTML =
+        '<div class="acv-field"><label for="acvF1">作品标题</label><input id="acvF1" type="text" placeholder="例如：雨夜里的第一班末班车"></div>' +
+        '<div class="acv-field"><label for="acvF2">内容类型</label><select id="acvF2"><option>城市纪录</option><option>手作 DIY</option><option>教程干货</option><option>人物访谈</option><option>生活方式</option><option>其他原创</option></select></div>' +
+        '<div class="acv-field"><label for="acvF3">联系方式</label><input id="acvF3" type="text" placeholder="邮箱或手机号，仅用于沟通"></div>' +
+        '<div class="acv-field"><label for="acvF4">作品简介</label><textarea id="acvF4" placeholder="简单说明拍摄背景、时长与素材来源"></textarea></div>' +
+        '<div class="acv-modal-actions"><button class="acv-btn acv-btn-ghost" type="button" data-acv-close>取消</button><button class="acv-btn acv-btn-primary" type="button" id="acvSubmitOk">提交投稿</button></div>';
+    },
+    feedback: function(){
+      modalTitle.textContent = '意见反馈';
+      modalSub.textContent = '内容纠错、违规举报或合作咨询，都从这里开始';
+      modalBody.innerHTML =
+        '<div class="acv-field"><label for="acvF5">反馈类型</label><select id="acvF5"><option>内容纠错</option><option>违规举报</option><option>功能建议</option><option>合作咨询</option></select></div>' +
+        '<div class="acv-field"><label for="acvF6">问题描述</label><textarea id="acvF6" placeholder="请尽量写明具体视频标题与时间点"></textarea></div>' +
+        '<div class="acv-modal-actions"><button class="acv-btn acv-btn-ghost" type="button" data-acv-close>取消</button><button class="acv-btn acv-btn-primary" type="button" id="acvFeedbackOk">提交反馈</button></div>';
+    },
+    share: function(){
+      modalTitle.textContent = '分享艾彩原创视频';
+      modalSub.textContent = '把喜欢的原创内容分享给朋友';
+      modalBody.innerHTML =
+        '<div class="acv-share-grid">' +
+          '<button class="acv-share-item" type="button" data-acv-share-item="微信"><span>微</span>微信</button>' +
+          '<button class="acv-share-item" type="button" data-acv-share-item="微博"><span>博</span>微博</button>' +
+          '<button class="acv-share-item" type="button" data-acv-share-item="QQ"><span>Q</span>QQ</button>' +
+        '</div>' +
+        '<div class="acv-modal-actions" style="justify-content:space-between"><button class="acv-btn acv-btn-ghost" type="button" id="acvCopyLink">复制页面链接</button><button class="acv-btn acv-btn-blue" type="button" data-acv-close>完成</button></div>';
+    },
+    author: function(name){
+      var data = {
+        '林岸纪实': {field:'城市纪录', works:'86', fans:'42.6万', bio:'纪录片导演，长期拍摄城市夜行与街区人物。《雨夜取景器》企划主创，习惯在雨里等一个真实的路人表情。作品节奏偏慢但信息密度高，强调同期声与自然光。', tags:'城市探索 / 在地文化 / 纪录片'},
+        '木言手作': {field:'手作 DIY', works:'64', fans:'28.3万', bio:'木工与皮具双修的手作人，视频以工序记录为主，会公开材料成本与失败次数。镜头稳定、讲解克制，被观众称为“最省钱的教程作者”，也常回复初学者的问题。', tags:'创作幕后 / 实用技巧 / 材料成本'},
+        '光位研究所': {field:'摄影教程', works:'112', fans:'53.1万', bio:'专注布光与拍摄技巧的教程作者，擅长用最简单的设备讲清原理。每条视频附参数与清单，被大量初学者收藏作为入门资料，也参与平台的免费影像课程录制。', tags:'教程干货 / 知识科普 / 布光'},
+        '巷口观察': {field:'生活记录', works:'73', fans:'21.9万', bio:'拍摄老城区日常的记录者，偏爱长镜头与同期声。作品常以一天为结构，用三组人物串起街区的时间，评论区常被观众补充成本地地图与美食清单。', tags:'日常记录 / 在地文化 / 长镜头'},
+        '艾彩访谈组': {field:'人物访谈', works:'48', fans:'36.7万', bio:'平台官方访谈团队，负责《镜头之外访谈录》的策划与执行。采访对象覆盖剪辑、摄影、制片与独立工作室，坚持保留受访者原话与停顿，不为了节奏而删减语境。', tags:'人物访谈 / 行业观察 / 创作幕后'},
+        '晨间五分钟': {field:'生活方式', works:'95', fans:'31.4万', bio:'以清晨为主题的生活影像作者，记录开店、通勤、早餐与会面。拍摄多用自然光，成片安静，被不少观众当作工作日的背景音，也常被推荐给刚开始记录生活的朋友。', tags:'治愈影像 / 生活方式 / 日常记录'}
+      };
+      var d = data[name] || data['林岸纪实'];
+      modalTitle.textContent = name;
+      modalSub.textContent = '创作者档案 · 艾彩原创视频签约创作者';
+      modalBody.innerHTML =
+        '<div class="acv-author-modal-top"><span class="acv-avatar" style="background:linear-gradient(135deg,#1b2a4a,#3f6fd8)" aria-hidden="true">' + name.slice(0,1) + '</span><div><h4>' + name + '</h4><span>' + d.field + '</span></div></div>' +
+        '<div class="acv-author-modal-body"><p>' + d.bio + '</p><p style="font-size:12.5px;color:#8b96ac">擅长方向：' + d.tags + '</p></div>' +
+        '<div class="acv-author-modal-stats"><div><b>' + d.works + '</b>作品</div><div><b>' + d.fans + '</b>粉丝</div><div><b>官方</b>认证</div></div>' +
+        '<div class="acv-modal-actions"><button class="acv-btn acv-btn-ghost" type="button" data-acv-share>分享档案</button><button class="acv-btn acv-btn-primary" type="button" data-acv-close>知道了</button></div>';
+    }
+  };
+
+  function openTemplate(type, arg){
+    if(type === 'share'){ templates.share(); }
+    else if(type === 'author'){ templates.author(arg); }
+    else if(templates[type]){ templates[type](); }
+    openModal();
+  }
+
+  document.querySelectorAll('[data-acv-open]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openTemplate(btn.getAttribute('data-acv-open'));
+    });
+  });
+  document.querySelectorAll('[data-acv-author]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      openTemplate('author', a.getAttribute('data-acv-author'));
+    });
+  });
+  document.querySelectorAll('[data-acv-share]').forEach(function(btn){
+    btn.addEventListener('click', function(){ openTemplate('share'); });
+  });
+
+  /* 弹窗内动态按钮委托 */
+  modalBody.addEventListener('click', function(e){
+    var t = e.target.closest('button');
+    if(!t) return;
+    if(t.hasAttribute('data-acv-close')){ closeModal(); return; }
+    if(t.id === 'acvSubmitOk'){
+      var title = document.getElementById('acvF1');
+      if(!title || !title.value.trim()){ toast('请先填写作品标题'); if(title) title.focus(); return; }
+      closeModal();
+      toast('投稿已提交，编辑将在 3 个工作日内回复');
+      return;
+    }
+    if(t.id === 'acvFeedbackOk'){
+      var desc = document.getElementById('acvF6');
+      if(!desc || !desc.value.trim()){ toast('请简单描述你遇到的问题'); if(desc) desc.focus(); return; }
+      closeModal();
+      toast('反馈已收到，我们会在 48 小时内处理');
+      return;
+    }
+    if(t.id === 'acvCopyLink'){
+      var url = window.location.href;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(url).then(function(){ toast('链接已复制到剪贴板'); }, function(){ toast('复制失败，请手动复制地址栏链接'); });
+      }else{
+        toast('复制失败，请手动复制地址栏链接');
+      }
+      return;
+    }
+    if(t.hasAttribute('data-acv-share-item')){
+      toast('已生成' + t.getAttribute('data-acv-share-item') + '分享卡片');
+      return;
+    }
+    if(t.hasAttribute('data-acv-share')){ openTemplate('share'); return; }
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var toTop = document.getElementById('acvToTop');
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if(ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function(){
+      if(window.scrollY > 520){ toTop.classList.add('is-show'); }
+      else{ toTop.classList.remove('is-show'); }
+      ticking = false;
+    });
+  });
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ---------- 首屏数据数字滚动 ---------- */
+  var stats = document.querySelectorAll('.acv-stat b');
+  var statDone = false;
+  function runStats(){
+    if(statDone) return;
+    statDone = true;
+    stats.forEach(function(el){
+      var full = el.innerHTML;
+      var m = full.match(/^([\d.]+)(<i>.*<\/i>)$/);
+      if(!m) return;
+      var target = parseFloat(m[1]);
+      var suffix = m[2];
+      var isFloat = m[1].indexOf('.') > -1;
+      var start = performance.now();
+      var dur = 1100;
+      function step(now){
+        var p = Math.min(1, (now - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = target * eased;
+        el.innerHTML = (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
+        if(p < 1) requestAnimationFrame(step);
+        else el.innerHTML = full;
+      }
+      el.innerHTML = '0' + suffix;
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var heroStats = document.querySelector('.acv-hero-stats');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ runStats(); io.disconnect(); } });
+    }, {threshold:.5});
+    if(heroStats) io.observe(heroStats);
+  }else{
+    runStats();
+  }
+})();
+</script>
+</body>
+            </html>
